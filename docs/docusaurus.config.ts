@@ -7,8 +7,8 @@ import { themes as prismThemes } from "prism-react-renderer"
 const config: Config = {
   title: "Express Architecture",
   tagline:
-    "Documente arquitecturas de software y procesos de negocio ágil y rápido",
-  favicon: "img/logo.png",
+    "Metodología ágil para documentar arquitecturas de software y procesos de negocio de manera visual, intuitiva y colaborativa.",
+  favicon: "img/logo.png", // Asegúrate de que el logo esté en docs/static/img/logo.png
 
   // Set the production url of your site here
   url: "https://expressarchitecture.netlify.app",
@@ -32,8 +32,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: "es",
+    locales: ["es"],
   },
 
   presets: [
@@ -76,7 +76,7 @@ const config: Config = {
       title: "Express Architecture",
       logo: {
         alt: "Express Architecture Logo",
-        src: "img/logo.png",
+        src: "img/logo.png", // Asegúrate de que el logo esté en docs/static/img/logo.png
       },
       items: [
         {
@@ -104,35 +104,23 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
+              label: "Documentación",
               to: "/docs/intro",
             },
           ],
         },
         {
-          title: "Community",
-          items: [
-            {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "X",
-              href: "https://x.com/docusaurus",
-            },
-          ],
-        },
-        {
-          title: "More",
+          title: "Blog",
           items: [
             {
               label: "Blog",
               to: "/blog",
             },
+          ],
+        },
+        {
+          title: "GitHub",
+          items: [
             {
               label: "GitHub",
               href: "https://github.com/judlup/express_architecture",
