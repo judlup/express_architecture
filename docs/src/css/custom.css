@@ -4,30 +4,28 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* Paleta basada en el logo Express Architecture */
 :root {
-  --ifm-color-primary: #4C200E; /* Principal oscuro distintivo */
-  --ifm-color-primary-dark: #6C4632; /* Marrón oscuro complementario */
-  --ifm-color-primary-darker: #945E26; /* Marrón intermedio cálido */
-  --ifm-color-primary-light: #FBB430; /* Amarillo vibrante para acentos */
-  --ifm-color-primary-lighter: #C5AC96; /* Tonalidad neutra, cálida */
-  --ifm-color-primary-lightest: #FDF7E1; /* Fondo claro o detalles suaves */
+  --ifm-color-primary: #5C2B0B; /* Marrón oscuro (principal) */
+  --ifm-color-primary-dark: #2D1B0E; /* Negro/marrón muy oscuro */
+  --ifm-color-primary-darker: #2D1B0E; /* Negro/marrón muy oscuro */
+  --ifm-color-primary-light: #FFC233; /* Amarillo (acentos) */
+  --ifm-color-primary-lighter: #FFB02E; /* Naranja (detalles) */
+  --ifm-color-primary-lightest: #FFF8E1; /* Beige claro (fondo) */
+  --ifm-background-color: #fff; /* Fondo general */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(253, 247, 225, 0.1); /* Fondo claro */
+  --docusaurus-highlighted-code-line-bg: rgba(255, 194, 51, 0.08); /* Amarillo suave */
 }
 
-
-
-
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #FBB430; /* Amarillo vibrante como principal */
-  --ifm-color-primary-dark: #945E26; /* Marrón intermedio cálido */
-  --ifm-color-primary-darker: #6C4632; /* Marrón oscuro complementario */
-  --ifm-color-primary-light: #C5AC96; /* Neutro cálido para detalles */
-  --ifm-color-primary-lighter: #93715C; /* Marrón suave para resaltar */
-  --ifm-color-primary-lightest: #4C200E; /* Fondo oscuro distintivo */
-  --docusaurus-highlighted-code-line-bg: rgba(76, 32, 14, 0.3); /* Fondo oscuro */
+  --ifm-color-primary: #FFC233; /* Amarillo como principal en oscuro */
+  --ifm-color-primary-dark: #FFB02E; /* Naranja */
+  --ifm-color-primary-darker: #5C2B0B; /* Marrón oscuro */
+  --ifm-color-primary-light: #FFF8E1; /* Beige claro */
+  --ifm-color-primary-lighter: #FFF8E1; /* Beige claro */
+  --ifm-color-primary-lightest: #2D1B0E; /* Fondo oscuro */
+  --ifm-background-color: #2D1B0E; /* Fondo general oscuro */
+  --docusaurus-highlighted-code-line-bg: rgba(255, 194, 51, 0.15); /* Amarillo suave */
 }
 
 

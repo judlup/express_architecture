@@ -14,10 +14,137 @@
   .heroBanner {
     padding: 2rem;
   }
+  .section {
+    padding: 2rem 0;
+  }
+  .benefitGrid,
+  .principlesGrid,
+  .artefactGrid {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .principleCard,
+  .artefactCard,
+  .benefitCard {
+    min-width: 90vw;
+    max-width: 98vw;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .heroBanner {
+    padding: 1rem 0.5rem;
+  }
+  .section {
+    padding: 1.2rem 0;
+  }
+  .principleIcon {
+    font-size: 2rem;
+  }
 }
 
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.benefitGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.benefitCard {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(92,43,11,0.07);
+  border: 1px solid #f5e6c6;
+  padding: 2rem 1.5rem;
+  min-width: 220px;
+  max-width: 320px;
+  flex: 1 1 220px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.benefitDescription {
+  font-size: 0.98rem;
+  margin-top: 0.5rem;
+  color: #3a2a13;
+}
+
+.principlesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.principleCard {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(92,43,11,0.06);
+  padding: 1.5rem 1rem;
+  min-width: 220px;
+  max-width: 320px;
+  flex: 1 1 220px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.principleIcon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.artefactGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.artefactCard {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(92,43,11,0.07);
+  padding: 2rem 1.5rem;
+  min-width: 220px;
+  max-width: 320px;
+  flex: 1 1 220px;
+  text-align: center;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artefactCard img {
+  max-width: 80px;
+  margin-bottom: 1rem;
+}
+
+.ctaSection {
+  padding: 3rem 0;
+  background: var(--ifm-color-primary-lightest);
+  text-align: center;
+}
+
+.ctaSection h2 {
+  margin-bottom: 1rem;
 }
