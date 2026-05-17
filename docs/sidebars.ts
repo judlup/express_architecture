@@ -21,9 +21,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Guía de Implementación",
-      items: [
-        "guia-implementacion/index",
-      ],
+      items: ["guia-implementacion/index"],
     },
     "faq",
     "contact",
