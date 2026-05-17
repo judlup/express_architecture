@@ -23,19 +23,6 @@ const sidebars: SidebarsConfig = {
       label: "Guía de Implementación",
       items: [
         "guia-implementacion/index",
-        {
-          type: "category",
-          label: "Pasos",
-          items: [
-            "guia-implementacion/antes-de-empezar",
-            "guia-implementacion/flujo-general",
-            "guia-implementacion/captura-estructurada",
-            "guia-implementacion/seleccion-del-artefacto",
-            "guia-implementacion/construccion-del-artefacto",
-            "guia-implementacion/validacion",
-            "guia-implementacion/checklist",
-          ],
-        },
       ],
     },
     "faq",
