@@ -4,48 +4,41 @@ title: Artefacts
 
 Aquí puedes explorar los principales artefactos utilizados en la metodología Express Architecture. Cada artefacto tiene su propósito y contribuye al diseño ágil de soluciones.
 
-<div style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
-
-  <div style={{
-    flex: '1',
-    border: '1px solid #ddd',
-    borderRadius: '8px',
-    padding: '1rem',
-    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-    textAlign: 'center'
-  }}>
-    <h3>Architectural Canvas</h3>
-    <p>Información sobre el Architectural Canvas.</p>
-    <a href="./architectural-canvas" style={{
-      display: 'inline-block',
-      marginTop: '0.5rem',
-      padding: '0.5rem 1rem',
-      backgroundColor: '#4C200E',
-      color: '#fff',
-      textDecoration: 'none',
-      borderRadius: '4px'
-    }}>Ver más</a>
-  </div>
-
-  <div style={{
-    flex: '1',
-    border: '1px solid #ddd',
-    borderRadius: '8px',
-    padding: '1rem',
-    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-    textAlign: 'center'
-  }}>
-    <h3>Infrastructural Diagram</h3>
-    <p>Información técnica relacionada.</p>
-    <a href="./infrastructural-diagram" style={{
-      display: 'inline-block',
-      marginTop: '0.5rem',
-      padding: '0.5rem 1rem',
-      backgroundColor: '#4C200E',
-      color: '#fff',
-      textDecoration: 'none',
-      borderRadius: '4px'
-    }}>Ver más</a>
-  </div>
-
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginTop: '2rem' }}>
+  {[
+    ['Catálogo de variables', './catalogo-variables'],
+    ['Mapa de actores', './mapa-actores'],
+    ['Mapa de procesos', './mapa-procesos'],
+    ['Swimlane / BPMN simplificado', './swimlane-bpmn-simplificado'],
+    ['Matriz proceso-sistema', './matriz-proceso-sistema'],
+    ['Matriz proceso-herramienta', './matriz-proceso-herramienta'],
+    ['Mapa de dependencias', './mapa-dependencias'],
+    ['Business Capability Canvas', './business-capability-canvas'],
+    ['Solution Architecture Canvas', './solution-architecture-canvas'],
+    ['Enterprise Architecture Canvas', './enterprise-architecture-canvas'],
+    ['Infrastructure Canvas', './infrastructure-canvas'],
+    ['Dashboard operativo', './dashboard-operativo'],
+    ['Scorecard / Tablero ejecutivo', './scorecard-tablero-ejecutivo'],
+    ['Matriz de priorización', './matriz-priorizacion'],
+    ['Mini ADR', './mini-adr'],
+  ].map(([title, href]) => (
+    <div key={href} style={{
+      border: '1px solid #ddd',
+      borderRadius: '8px',
+      padding: '1rem',
+      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.04)',
+      textAlign: 'center'
+    }}>
+      <h3>{title}</h3>
+      <a href={href} style={{
+        display: 'inline-block',
+        marginTop: '0.5rem',
+        padding: '0.5rem 1rem',
+        backgroundColor: '#4C200E',
+        color: '#fff',
+        textDecoration: 'none',
+        borderRadius: '4px'
+      }}>Ver más</a>
+    </div>
+  ))}
 </div>
