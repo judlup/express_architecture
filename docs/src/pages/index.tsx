@@ -18,13 +18,13 @@ export default function Home() {
             alt="Logo Express Architecture"
             style={{ maxWidth: 180, marginBottom: 24 }}
           />
-                <h1 className="hero__title">
-                  Express Architecture — Metodología ligera y visual
-                </h1>
-                <p className="hero__subtitle">
-                  Metodología en evolución (Design Science Research) que emplea
-                  Información Mínima Suficiente para apoyar decisiones
-                  organizacionales.
+          <h1 className="hero__title">
+            Express Architecture — Metodología ligera y visual
+          </h1>
+          <p className="hero__subtitle">
+            Metodología en evolución (Design Science Research) que emplea
+            Información Mínima Suficiente para apoyar decisiones
+            organizacionales.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center" }}>
             <Link
@@ -57,7 +57,7 @@ export default function Home() {
               }}
             >
               <p>
-                <strong>Express Architecture</strong> es un metamodelo ligero,
+                <strong>Express Architecture</strong> es un metodolog�a ligero,
                 visual e iterativo desarrollado en el marco de una investigación
                 doctoral (Design Science Research). Su objetivo es apoyar la
                 toma de decisiones organizacionales mediante la captura y
@@ -316,7 +316,7 @@ export default function Home() {
           <div className="container">
             <h2>Comienza: guía rápida y artefactos</h2>
             <p className="margin-bottom--md">
-              Express Architecture es un metamodelo en construcción. Aquí
+              Express Architecture es una metodología en construcción. Aquí
               encontrarás guías, artefactos y ejemplos aplicados que reducen la
               fricción en la toma de decisiones y facilitan el análisis en
               contexto.
@@ -332,7 +332,7 @@ export default function Home() {
                 className="button button--secondary button--lg"
                 to="/docs/express-architecture/index"
               >
-                Leer sobre el metamodelo
+                Leer sobre la metodología
               </Link>
             </div>
           </div>
@@ -341,3 +341,4 @@ export default function Home() {
     </Layout>
   )
 }
+
