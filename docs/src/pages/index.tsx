@@ -18,13 +18,13 @@ export default function Home() {
             alt="Logo Express Architecture"
             style={{ maxWidth: 180, marginBottom: 24 }}
           />
-          <h1 className="hero__title">
-            Express Architecture — Metamodelo ligero y visual
-          </h1>
-          <p className="hero__subtitle">
-            Metamodelo en evolución (Design Science Research) que emplea
-            Información Mínima Suficiente para apoyar decisiones
-            organizacionales.
+                <h1 className="hero__title">
+                  Express Architecture — Metodología ligera y visual
+                </h1>
+                <p className="hero__subtitle">
+                  Metodología en evolución (Design Science Research) que emplea
+                  Información Mínima Suficiente para apoyar decisiones
+                  organizacionales.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center" }}>
             <Link
