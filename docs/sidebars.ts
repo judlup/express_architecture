@@ -12,24 +12,31 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Fundamentos",
-      items: ["fundamentals/index", "fundamentals/que-es-express-architecture", "fundamentals/informacion-minima-suficiente"],
+      items: [
+        "fundamentos/index",
+        "fundamentos/que-es-express-architecture",
+        "fundamentos/informacion-minima-suficiente",
+      ],
     },
     {
       type: "category",
       label: "Guía de Implementación",
-      items: ["implementation/index", {
-        type: "category",
-        label: "Pasos",
-        items: [
-          "guia-implementacion/antes-de-empezar",
-          "guia-implementacion/flujo-general",
-          "guia-implementacion/captura-estructurada",
-          "guia-implementacion/seleccion-del-artefacto",
-          "guia-implementacion/construccion-del-artefacto",
-          "guia-implementacion/validacion",
-          "guia-implementacion/checklist"
-        ]
-      }],
+      items: [
+        "guia-implementacion/index",
+        {
+          type: "category",
+          label: "Pasos",
+          items: [
+            "guia-implementacion/antes-de-empezar",
+            "guia-implementacion/flujo-general",
+            "guia-implementacion/captura-estructurada",
+            "guia-implementacion/seleccion-del-artefacto",
+            "guia-implementacion/construccion-del-artefacto",
+            "guia-implementacion/validacion",
+            "guia-implementacion/checklist",
+          ],
+        },
+      ],
     },
     "faq",
     "contact",
@@ -65,7 +72,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Casos de uso",
-      items: ["use-cases/index"],
+      items: ["casos-de-uso/index"],
     },
     {
       type: "category",
