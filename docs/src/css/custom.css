@@ -35,9 +35,9 @@
   --ifm-color-primary-lightest: #E6EBEF;
   --ifm-background-color: #0F1B2A; /* Fondo principal (navy) */
   --ea-surface: #081a20; /* Superficies generales */
-  --ea-card-bg: #0F2730; /* Fondo de tarjetas */
-  --ea-muted-text: #C8D2DA;
-  --ea-text: #E6EBEF;
+  --ea-card-bg: #122b31; /* Fondo de tarjetas (ligeramente más claro para legibilidad) */
+  --ea-muted-text: #B9C7CE;
+  --ea-text: #E9F2F4;
   --docusaurus-highlighted-code-line-bg: rgba(0, 178, 185, 0.15);
 }
 
@@ -53,16 +53,21 @@
 }
 
 [data-theme='dark'] .hero--primary {
-  background: linear-gradient(135deg, #04343a 0%, var(--ifm-background-color) 100%);
+  background: linear-gradient(135deg, #06494f 0%, var(--ifm-background-color) 100%); /* ligeramente aclarado */
 }
 
 [data-theme='dark'] .card,
 [data-theme='dark'] .card.padded,
 [data-theme='dark'] .card .markdown {
   background: var(--ea-card-bg);
-  border-color: rgba(255, 255, 255, 0.04);
-  box-shadow: none;
+  border-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
   color: var(--ea-text);
+}
+
+[data-theme='dark'] .card:hover {
+  box-shadow: 0 8px 24px rgba(0, 178, 185, 0.06);
+  transform: translateY(-4px);
 }
 
 [data-theme='dark'] a {
@@ -84,6 +89,24 @@
 [data-theme='dark'] .hero--primary .button--primary {
   background-color: white;
   color: var(--ea-teal);
+}
+
+/* Ajustes para mejorar legibilidad en elementos específicos */
+[data-theme='dark'] pre code,
+[data-theme='dark'] .highlight pre {
+  background: #071821;
+  color: #e6f3f4;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+[data-theme='dark'] table {
+  background: transparent;
+  color: var(--ea-text);
+}
+
+[data-theme='dark'] .footer--dark {
+  background: #0b0f11;
+  color: var(--ea-muted-text);
 }
 
 /* Estilos de botones mejorados */
