@@ -67,6 +67,31 @@
   padding: 2rem 0;
 }
 
+/* Container específico para '¿Qué es Express Architecture?' en modo oscuro */
+[data-theme='dark'] .sectionWithGrayBg > .container {
+  background: rgba(255,255,255,0.02);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+[data-theme='dark'] .sectionWithGrayBg > .container h2.text--center {
+  color: var(--ea-text);
+}
+
+[data-theme='dark'] .sectionWithGrayBg > .container p,
+[data-theme='dark'] .sectionWithGrayBg > .container .benefitDescription {
+  color: var(--ea-muted-text);
+}
+
+@media screen and (max-width: 996px) {
+  [data-theme='dark'] .sectionWithGrayBg > .container {
+    padding: 1rem;
+    max-width: 92vw;
+  }
+}
+
 [data-theme='dark'] .card,
 [data-theme='dark'] .card.padded,
 [data-theme='dark'] .card .markdown {
