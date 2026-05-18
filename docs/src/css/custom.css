@@ -56,6 +56,17 @@
   background: linear-gradient(135deg, #06494f 0%, var(--ifm-background-color) 100%); /* ligeramente aclarado */
 }
 
+/* Ajustes para el bloque central con fondo gris en dark mode */
+[data-theme='dark'] .sectionWithGrayBg {
+  background: linear-gradient(135deg, rgba(8,26,28,0.6) 0%, rgba(15,27,42,0.6) 100%);
+  border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Reducir espacio vertical del bloque central en modo oscuro para evitar sensación de vacío */
+[data-theme='dark'] .section.sectionWithGrayBg {
+  padding: 2rem 0;
+}
+
 [data-theme='dark'] .card,
 [data-theme='dark'] .card.padded,
 [data-theme='dark'] .card .markdown {
