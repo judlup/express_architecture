@@ -26,14 +26,64 @@
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #00B2B9; /* PRIMARY TEAL - Resalta en fondo oscuro */
-  --ifm-color-primary-dark: #00A3A8; /* Teal más oscuro */
-  --ifm-color-primary-darker: #1C2E40; /* DARK SECONDARY */
-  --ifm-color-primary-light: #0F1B2A; /* PRIMARY DARK - Contraste en oscuro */
-  --ifm-color-primary-lighter: #1C2E40; /* DARK SECONDARY */
-  --ifm-color-primary-lightest: #E6EBEF; /* LIGHT GRAY */
-  --ifm-background-color: #0F1B2A; /* Fondo oscuro con Navy */
-  --docusaurus-highlighted-code-line-bg: rgba(0, 178, 185, 0.15); /* Teal suave */
+  /* Variables principales adaptadas a modo oscuro */
+  --ifm-color-primary: #00B2B9;
+  --ifm-color-primary-dark: #00A3A8;
+  --ifm-color-primary-darker: #1C2E40;
+  --ifm-color-primary-light: #0F1B2A;
+  --ifm-color-primary-lighter: #1C2E40;
+  --ifm-color-primary-lightest: #E6EBEF;
+  --ifm-background-color: #0F1B2A; /* Fondo principal (navy) */
+  --ea-surface: #081a20; /* Superficies generales */
+  --ea-card-bg: #0F2730; /* Fondo de tarjetas */
+  --ea-muted-text: #C8D2DA;
+  --ea-text: #E6EBEF;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 178, 185, 0.15);
+}
+
+/* Ajustes visuales para modo oscuro */
+[data-theme='dark'] body {
+  background-color: var(--ifm-background-color);
+  color: var(--ea-text);
+}
+
+[data-theme='dark'] .navbar {
+  background: rgba(15, 27, 42, 0.9);
+  box-shadow: none;
+}
+
+[data-theme='dark'] .hero--primary {
+  background: linear-gradient(135deg, #04343a 0%, var(--ifm-background-color) 100%);
+}
+
+[data-theme='dark'] .card,
+[data-theme='dark'] .card.padded,
+[data-theme='dark'] .card .markdown {
+  background: var(--ea-card-bg);
+  border-color: rgba(255, 255, 255, 0.04);
+  box-shadow: none;
+  color: var(--ea-text);
+}
+
+[data-theme='dark'] a {
+  color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .button--primary {
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: var(--ea-navy-dark);
+}
+
+[data-theme='dark'] .button--secondary {
+  background-color: transparent;
+  border-color: rgba(255,255,255,0.08);
+  color: var(--ea-text);
+}
+
+[data-theme='dark'] .hero--primary .button--primary {
+  background-color: white;
+  color: var(--ea-teal);
 }
 
 /* Estilos de botones mejorados */
