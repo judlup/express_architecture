@@ -14,7 +14,7 @@ export default function Home() {
       <header className={styles.heroBanner + " hero hero--primary"}>
         <div className="container text--center">
           <img
-            src="/img/logo.png"
+            src="/img/icono_azul_oscuro.png"
             alt="Logo Express Architecture"
             style={{ maxWidth: 180, marginBottom: 24 }}
           />
@@ -29,13 +29,13 @@ export default function Home() {
           <div style={{ display: "flex", gap: 12, justifyContent: "center" }}>
             <Link
               className="button button--primary button--lg"
-              to="/docs/getting-started/index"
+              to="/docs/getting-started"
             >
               Guía rápida
             </Link>
             <Link
               className="button button--secondary button--lg"
-              to="/docs/express-architecture/index"
+              to="/docs/express-architecture"
             >
               Más sobre Express Architecture
             </Link>
@@ -45,7 +45,7 @@ export default function Home() {
 
       <main>
         {/* ¿Qué es Express Architecture? */}
-        <section className={styles.section}>
+        <section className={styles.section + " " + styles.sectionWithGrayBg}>
           <div className="container">
             <h2 className="text--center">¿Qué es Express Architecture?</h2>
             <div
@@ -57,8 +57,8 @@ export default function Home() {
               }}
             >
               <p>
-                <strong>Express Architecture</strong> es un metodolog�a ligero,
-                visual e iterativo desarrollado en el marco de una investigación
+                <strong>Express Architecture</strong> es una metodología ligera,
+                visual e iterativa desarrollada en el marco de una investigación
                 doctoral (Design Science Research). Su objetivo es apoyar la
                 toma de decisiones organizacionales mediante la captura y
                 comunicación de{" "}
@@ -69,10 +69,7 @@ export default function Home() {
         </section>
 
         {/* Beneficios */}
-        <section
-          className={styles.section}
-          style={{ background: "var(--ifm-color-primary-lightest)" }}
-        >
+        <section className={styles.section + " " + styles.sectionWithGrayBg}>
           <div className="container">
             <h2 className="text--center">Beneficios</h2>
             <div className={styles.principlesGrid}>
@@ -139,7 +136,7 @@ export default function Home() {
         </section>
 
         {/* Aplicaciones */}
-        <section className={styles.section}>
+        <section className={styles.section + " " + styles.sectionWithGrayBg}>
           <div className="container">
             <h2 className="text--center">Aplicaciones</h2>
             <div className={styles.artefactGrid}>
@@ -199,10 +196,7 @@ export default function Home() {
         </section>
 
         {/* Principios Fundamentales */}
-        <section
-          className={styles.section}
-          style={{ background: "var(--ifm-color-primary-lightest)" }}
-        >
+        <section className={styles.section + " " + styles.sectionWithGrayBg}>
           <div className="container">
             <h2 className="text--center">Principios Fundamentales</h2>
             <div className={styles.principlesGrid}>
@@ -261,7 +255,7 @@ export default function Home() {
         </section>
 
         {/* Artefactos Clave */}
-        <section className={styles.section}>
+        <section className={styles.section + " " + styles.sectionWithGrayBg}>
           <div className="container">
             <h2 className="text--center">Artefactos Clave</h2>
             <div className={styles.artefactGrid}>
@@ -324,13 +318,13 @@ export default function Home() {
             <div style={{ display: "flex", gap: 12 }}>
               <Link
                 className="button button--primary button--lg"
-                to="/docs/getting-started/index"
+                to="/docs/getting-started"
               >
                 Comenzar guía rápida
               </Link>
               <Link
                 className="button button--secondary button--lg"
-                to="/docs/express-architecture/index"
+                to="/docs/express-architecture"
               >
                 Leer sobre la metodología
               </Link>
@@ -341,4 +335,3 @@ export default function Home() {
     </Layout>
   )
 }
-

@@ -57,6 +57,10 @@
   padding: 3rem 0;
 }
 
+.sectionWithGrayBg {
+  background: linear-gradient(135deg, #E6EBEF 0%, #F8FAFB 100%);
+}
+
 .benefitGrid {
   display: flex;
   flex-wrap: wrap;
@@ -68,20 +72,26 @@
 .benefitCard {
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(92,43,11,0.07);
-  border: 1px solid #f5e6c6;
+  box-shadow: 0 2px 12px rgba(31, 78, 124, 0.08);
+  border: 1px solid #E6EBEF;
   padding: 2rem 1.5rem;
   min-width: 220px;
   max-width: 320px;
   flex: 1 1 220px;
   text-align: center;
   margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.benefitCard:hover {
+  box-shadow: 0 4px 16px rgba(0, 178, 185, 0.12);
+  border-color: #00B2B9;
 }
 
 .benefitDescription {
   font-size: 0.98rem;
   margin-top: 0.5rem;
-  color: #3a2a13;
+  color: #4a5568;
 }
 
 .principlesGrid {
@@ -95,7 +105,8 @@
 .principleCard {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 1px 6px rgba(92,43,11,0.06);
+  box-shadow: 0 1px 6px rgba(31, 78, 124, 0.06);
+  border: 1px solid #E6EBEF;
   padding: 1.5rem 1rem;
   min-width: 220px;
   max-width: 320px;
@@ -104,6 +115,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.3s ease;
+}
+
+.principleCard:hover {
+  border-color: #00B2B9;
+  box-shadow: 0 4px 12px rgba(0, 178, 185, 0.1);
 }
 
 .principleIcon {
@@ -122,7 +139,8 @@
 .artefactCard {
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(92,43,11,0.07);
+  box-shadow: 0 2px 12px rgba(31, 78, 124, 0.08);
+  border: 1px solid #E6EBEF;
   padding: 2rem 1.5rem;
   min-width: 220px;
   max-width: 320px;
@@ -132,6 +150,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.3s ease;
+}
+
+.artefactCard:hover {
+  box-shadow: 0 4px 16px rgba(0, 178, 185, 0.12);
+  border-color: #00B2B9;
 }
 
 .artefactCard img {
@@ -140,11 +164,22 @@
 }
 
 .ctaSection {
-  padding: 3rem 0;
-  background: var(--ifm-color-primary-lightest);
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #E6EBEF 0%, #F8FAFB 100%);
   text-align: center;
+  border-top: 2px solid #00B2B9;
 }
 
 .ctaSection h2 {
+  color: #0F1B2A;
+  font-size: 2rem;
   margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.ctaSection p {
+  color: #4a5568;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
 }
