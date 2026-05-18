@@ -14,29 +14,38 @@ export default function Home() {
       <header className={styles.heroBanner + " hero hero--primary"}>
         <div className="container text--center">
           <img
-            src="/img/logo.png"
+            src="/img/icono_azul_oscuro.png"
             alt="Logo Express Architecture"
             style={{ maxWidth: 180, marginBottom: 24 }}
           />
           <h1 className="hero__title">
-            Revoluciona la Documentación y Diseño de Arquitecturas
+            Express Architecture — Metodología ligera y visual
           </h1>
           <p className="hero__subtitle">
-            Express Architecture: Metodología ágil, visual y colaborativa para
-            equipos modernos.
+            Metodología en evolución (Design Science Research) que emplea
+            Información Mínima Suficiente para apoyar decisiones
+            organizacionales.
           </p>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro"
-          >
-            Comienza Ahora
-          </Link>
+          <div style={{ display: "flex", gap: 12, justifyContent: "center" }}>
+            <Link
+              className="button button--primary button--lg"
+              to="/docs/getting-started"
+            >
+              Guía rápida
+            </Link>
+            <Link
+              className="button button--secondary button--lg"
+              to="/docs/express-architecture"
+            >
+              Más sobre Express Architecture
+            </Link>
+          </div>
         </div>
       </header>
 
       <main>
         {/* ¿Qué es Express Architecture? */}
-        <section className={styles.section}>
+        <section className={styles.section + " " + styles.sectionWithGrayBg}>
           <div className="container">
             <h2 className="text--center">¿Qué es Express Architecture?</h2>
             <div
@@ -48,23 +57,19 @@ export default function Home() {
               }}
             >
               <p>
-                <strong>Express Architecture</strong> es una{" "}
-                <strong>metodología ágil, colaborativa e iterativa</strong> que
-                ayuda a entender el negocio y la tecnología que este utiliza de
-                manera visual. Su propósito es facilitar el entendimiento
-                compartido y la toma de decisiones estratégicas, integrando a
-                actores técnicos y no técnicos en un proceso de alineación,
-                comunicación y mejora continua.
+                <strong>Express Architecture</strong> es una metodología ligera,
+                visual e iterativa desarrollada en el marco de una investigación
+                doctoral (Design Science Research). Su objetivo es apoyar la
+                toma de decisiones organizacionales mediante la captura y
+                comunicación de{" "}
+                <strong>Información Mínima Suficiente (IMS)</strong>.
               </p>
             </div>
           </div>
         </section>
 
         {/* Beneficios */}
-        <section
-          className={styles.section}
-          style={{ background: "var(--ifm-color-primary-lightest)" }}
-        >
+        <section className={styles.section + " " + styles.sectionWithGrayBg}>
           <div className="container">
             <h2 className="text--center">Beneficios</h2>
             <div className={styles.principlesGrid}>
@@ -78,9 +83,9 @@ export default function Home() {
                 </span>
                 <strong>Rapidez y eficiencia</strong>
                 <p className={styles.benefitDescription}>
-                  Acelera el entendimiento y la alineación entre negocio y
-                  tecnología, reduciendo tiempos y recursos en el análisis y la
-                  comunicación.
+                  Reduce tiempos de análisis y facilita la alineación entre
+                  negocio y tecnología, priorizando la información útil para la
+                  decisión.
                 </p>
               </div>
               <div className={styles.principleCard}>
@@ -94,7 +99,8 @@ export default function Home() {
                 <strong>Colaboración real</strong>
                 <p className={styles.benefitDescription}>
                   Facilita la participación activa y el diálogo entre perfiles
-                  técnicos y no técnicos, promoviendo una visión compartida.
+                  técnicos y no técnicos, apoyando la construcción de una visión
+                  compartida.
                 </p>
               </div>
               <div className={styles.principleCard}>
@@ -107,8 +113,8 @@ export default function Home() {
                 </span>
                 <strong>Flexibilidad e iteración</strong>
                 <p className={styles.benefitDescription}>
-                  Permite adaptar y evolucionar la visión del negocio y la
-                  tecnología de forma ágil y continua.
+                  Permite adaptar e iterar artefactos de forma ágil según
+                  evidencia recogida en contexto.
                 </p>
               </div>
               <div className={styles.principleCard}>
@@ -121,8 +127,8 @@ export default function Home() {
                 </span>
                 <strong>Mejor toma de decisiones</strong>
                 <p className={styles.benefitDescription}>
-                  Proporciona claridad visual y contexto para tomar decisiones
-                  estratégicas informadas y reducir riesgos.
+                  Hace visible relaciones y dependencias, y apoya decisiones
+                  mejor fundamentadas reduciendo incertidumbre.
                 </p>
               </div>
             </div>
@@ -130,7 +136,7 @@ export default function Home() {
         </section>
 
         {/* Aplicaciones */}
-        <section className={styles.section}>
+        <section className={styles.section + " " + styles.sectionWithGrayBg}>
           <div className="container">
             <h2 className="text--center">Aplicaciones</h2>
             <div className={styles.artefactGrid}>
@@ -190,10 +196,7 @@ export default function Home() {
         </section>
 
         {/* Principios Fundamentales */}
-        <section
-          className={styles.section}
-          style={{ background: "var(--ifm-color-primary-lightest)" }}
-        >
+        <section className={styles.section + " " + styles.sectionWithGrayBg}>
           <div className="container">
             <h2 className="text--center">Principios Fundamentales</h2>
             <div className={styles.principlesGrid}>
@@ -235,7 +238,7 @@ export default function Home() {
                 >
                   📄
                 </span>
-                <strong>Documentación Ágil</strong>
+                <strong>Información Mínima Suficiente (IMS)</strong>
               </div>
               <div className={styles.principleCard}>
                 <span
@@ -245,14 +248,14 @@ export default function Home() {
                 >
                   💡
                 </span>
-                <strong>Decisiones Informadas</strong>
+                <strong>Decisiones Informadas y Trazabilidad</strong>
               </div>
             </div>
           </div>
         </section>
 
         {/* Artefactos Clave */}
-        <section className={styles.section}>
+        <section className={styles.section + " " + styles.sectionWithGrayBg}>
           <div className="container">
             <h2 className="text--center">Artefactos Clave</h2>
             <div className={styles.artefactGrid}>
@@ -266,8 +269,8 @@ export default function Home() {
                 </span>
                 <h3>System Architecture Canvas</h3>
                 <p>
-                  Herramienta visual para estructurar información de procesos y
-                  sistemas de forma rápida y comprensible.
+                  Artefacto visual para estructurar información de procesos y
+                  sistemas con IMS.
                 </p>
               </div>
               <div className={styles.artefactCard}>
@@ -280,8 +283,8 @@ export default function Home() {
                 </span>
                 <h3>Modelo C4</h3>
                 <p>
-                  Representa la arquitectura del sistema en diferentes niveles
-                  de detalle (Contexto, Contenedores, Componentes y Código).
+                  Representa la arquitectura en diferentes niveles, adaptado a
+                  IMS.
                 </p>
               </div>
               <div className={styles.artefactCard}>
@@ -294,8 +297,8 @@ export default function Home() {
                 </span>
                 <h3>Diagrama de Infraestructura</h3>
                 <p>
-                  Esquemas detallados de la infraestructura tecnológica que
-                  respaldan las soluciones propuestas.
+                  Esquemas de infraestructura que complementan los artefactos
+                  operativos.
                 </p>
               </div>
             </div>
@@ -305,18 +308,27 @@ export default function Home() {
         {/* Llamado a la acción */}
         <section className={styles.ctaSection}>
           <div className="container">
-            <h2>Únete a la revolución visual de la arquitectura de software</h2>
+            <h2>Comienza: guía rápida y artefactos</h2>
             <p className="margin-bottom--md">
-              “Diseñar sistemas no tiene que ser complicado; con Express
-              Architecture, la claridad y la colaboración son la base del
-              éxito.”
+              Express Architecture es una metodología en construcción. Aquí
+              encontrarás guías, artefactos y ejemplos aplicados que reducen la
+              fricción en la toma de decisiones y facilitan el análisis en
+              contexto.
             </p>
-            <Link
-              className="button button--primary button--lg"
-              to="/docs/intro"
-            >
-              Explora la documentación
-            </Link>
+            <div style={{ display: "flex", gap: 12 }}>
+              <Link
+                className="button button--primary button--lg"
+                to="/docs/getting-started"
+              >
+                Comenzar guía rápida
+              </Link>
+              <Link
+                className="button button--secondary button--lg"
+                to="/docs/express-architecture"
+              >
+                Leer sobre la metodología
+              </Link>
+            </div>
           </div>
         </section>
       </main>
