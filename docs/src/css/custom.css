@@ -4,28 +4,289 @@
  * work well for content-centric websites.
  */
 
-/* Paleta basada en el logo Express Architecture */
+/* Paleta Express Architecture */
 :root {
-  --ifm-color-primary: #5C2B0B; /* Marrón oscuro (principal) */
-  --ifm-color-primary-dark: #2D1B0E; /* Negro/marrón muy oscuro */
-  --ifm-color-primary-darker: #2D1B0E; /* Negro/marrón muy oscuro */
-  --ifm-color-primary-light: #FFC233; /* Amarillo (acentos) */
-  --ifm-color-primary-lighter: #FFB02E; /* Naranja (detalles) */
-  --ifm-color-primary-lightest: #FFF8E1; /* Beige claro (fondo) */
-  --ifm-background-color: #fff; /* Fondo general */
+  --ifm-color-primary: #00B2B9; /* PRIMARY TEAL - Claridad, enfoque, decisión, acción */
+  --ifm-color-primary-dark: #1C2E40; /* DARK SECONDARY - Profundidad, estructura */
+  --ifm-color-primary-darker: #0F1B2A; /* PRIMARY DARK / GRAPHITE NAVY - Confianza, solidez, autoridad */
+  --ifm-color-primary-light: #E6EBEF; /* LIGHT GRAY - Fondo, superficies, separadores */
+  --ifm-color-primary-lighter: #C8D2DA; /* SOFT GRAY - Texto secundario, bordes, iconos */
+  --ifm-color-primary-lightest: #FFFFFF; /* BACKGROUND WHITE - Fondo principal */
+  --ifm-background-color: #FFFFFF; /* Fondo general */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(255, 194, 51, 0.08); /* Amarillo suave */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 178, 185, 0.08); /* Teal suave */
+  
+  /* Variables adicionales */
+  --ea-teal: #00B2B9;
+  --ea-navy-dark: #0F1B2A;
+  --ea-navy-secondary: #1C2E40;
+  --ea-light-gray: #E6EBEF;
+  --ea-soft-gray: #C8D2DA;
+  --ea-white: #FFFFFF;
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #FFC233; /* Amarillo como principal en oscuro */
-  --ifm-color-primary-dark: #FFB02E; /* Naranja */
-  --ifm-color-primary-darker: #5C2B0B; /* Marrón oscuro */
-  --ifm-color-primary-light: #FFF8E1; /* Beige claro */
-  --ifm-color-primary-lighter: #FFF8E1; /* Beige claro */
-  --ifm-color-primary-lightest: #2D1B0E; /* Fondo oscuro */
-  --ifm-background-color: #2D1B0E; /* Fondo general oscuro */
-  --docusaurus-highlighted-code-line-bg: rgba(255, 194, 51, 0.15); /* Amarillo suave */
+  /* Variables principales adaptadas a modo oscuro */
+  --ifm-color-primary: #00B2B9;
+  --ifm-color-primary-dark: #00A3A8;
+  --ifm-color-primary-darker: #1C2E40;
+  --ifm-color-primary-light: #0F1B2A;
+  --ifm-color-primary-lighter: #1C2E40;
+  --ifm-color-primary-lightest: #E6EBEF;
+  --ifm-background-color: #0F1B2A; /* Fondo principal (navy) */
+  --ea-surface: #081a20; /* Superficies generales */
+  --ea-card-bg: #122b31; /* Fondo de tarjetas (ligeramente más claro para legibilidad) */
+  --ea-muted-text: #B9C7CE;
+  --ea-text: #E9F2F4;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 178, 185, 0.15);
+}
+
+/* Ajustes visuales para modo oscuro */
+[data-theme='dark'] body {
+  background-color: var(--ifm-background-color);
+  color: var(--ea-text);
+}
+
+[data-theme='dark'] .navbar {
+  background: rgba(15, 27, 42, 0.9);
+  box-shadow: none;
+}
+
+[data-theme='dark'] .hero--primary {
+  background: linear-gradient(135deg, #06494f 0%, var(--ifm-background-color) 100%); /* ligeramente aclarado */
+}
+
+/* Ajustes para el bloque central con fondo gris en dark mode */
+[data-theme='dark'] .sectionWithGrayBg {
+  background: linear-gradient(135deg, rgba(8,26,28,0.6) 0%, rgba(15,27,42,0.6) 100%);
+  border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Reducir espacio vertical del bloque central en modo oscuro para evitar sensación de vacío */
+[data-theme='dark'] .section.sectionWithGrayBg {
+  padding: 2rem 0;
+}
+
+/* Container específico para '¿Qué es Express Architecture?' en modo oscuro */
+[data-theme='dark'] .sectionWithGrayBg > .container {
+  background: rgba(255,255,255,0.02);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+[data-theme='dark'] .sectionWithGrayBg > .container h2.text--center {
+  color: var(--ea-text);
+}
+
+[data-theme='dark'] .sectionWithGrayBg > .container p,
+[data-theme='dark'] .sectionWithGrayBg > .container .benefitDescription {
+  color: var(--ea-muted-text);
+}
+
+@media screen and (max-width: 996px) {
+  [data-theme='dark'] .sectionWithGrayBg > .container {
+    padding: 1rem;
+    max-width: 92vw;
+  }
+}
+
+[data-theme='dark'] .card,
+[data-theme='dark'] .card.padded,
+[data-theme='dark'] .card .markdown {
+  background: var(--ea-card-bg);
+  border-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  color: var(--ea-text);
+}
+
+[data-theme='dark'] .card:hover {
+  box-shadow: 0 8px 24px rgba(0, 178, 185, 0.06);
+  transform: translateY(-4px);
+}
+
+[data-theme='dark'] a {
+  color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .button--primary {
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: var(--ea-navy-dark);
+}
+
+[data-theme='dark'] .button--secondary {
+  background-color: transparent;
+  border-color: rgba(255,255,255,0.08);
+  color: var(--ea-text);
+}
+
+[data-theme='dark'] .hero--primary .button--primary {
+  background-color: white;
+  color: var(--ea-teal);
+}
+
+/* Ajustes para mejorar legibilidad en elementos específicos */
+[data-theme='dark'] pre code,
+[data-theme='dark'] .highlight pre {
+  background: #071821;
+  color: #e6f3f4;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+[data-theme='dark'] table {
+  background: transparent;
+  color: var(--ea-text);
+}
+
+[data-theme='dark'] .footer--dark {
+  background: #0b0f11;
+  color: var(--ea-muted-text);
+}
+
+/* Estilos de botones mejorados */
+.button--primary {
+  background-color: var(--ea-teal);
+  border-color: var(--ea-teal);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.button--primary:hover,
+.button--primary:focus {
+  background-color: #00A3A8;
+  border-color: #00A3A8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 178, 185, 0.3);
+}
+
+.button--secondary {
+  background-color: white;
+  border-color: var(--ea-navy-dark);
+  border-width: 2px;
+  color: var(--ea-navy-dark);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button--secondary:hover,
+.button--secondary:focus {
+  background-color: #E6EBEF;
+  border-color: var(--ea-navy-dark);
+  color: var(--ea-navy-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 27, 42, 0.15);
+}
+
+/* Estilos de enlaces */
+a {
+  color: var(--ea-teal);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #00A3A8;
+}
+
+/* Estilos de barra de navegación */
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.navbar__link--active {
+  border-bottom: 3px solid var(--ea-teal);
+}
+
+/* Estilos de tarjetas (cards) */
+.card {
+  border: 1px solid var(--ea-light-gray);
+  box-shadow: 0 2px 8px rgba(31, 78, 124, 0.06);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 178, 185, 0.1);
+  border-color: var(--ea-teal);
+}
+
+/* Estilos para hero banner */
+.hero--primary {
+  background: linear-gradient(135deg, var(--ea-teal) 0%, #00A3A8 100%);
+  color: white;
+  padding: 6rem 0 8rem 0;
+}
+
+.hero--primary .hero__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.hero--primary .hero__subtitle {
+  font-size: 1.2rem;
+  opacity: 0.98;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Botones en hero */
+.hero--primary .button {
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.hero--primary .button--primary {
+  background-color: white;
+  color: var(--ea-teal);
+  border-color: white;
+}
+
+.hero--primary .button--primary:hover {
+  background-color: #F0FAFB;
+  border-color: #F0FAFB;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hero--primary .button--secondary {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  border-width: 2px;
+}
+
+.hero--primary .button--secondary:hover {
+  background-color: white;
+  color: var(--ea-teal);
+  border-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para secciones */
+.section {
+  transition: background-color 0.3s ease;
+}
+
+/* Tipografía mejorada */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ea-navy-dark);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] h4,
+[data-theme='dark'] h5,
+[data-theme='dark'] h6 {
+  color: var(--ea-white);
 }
 
 
