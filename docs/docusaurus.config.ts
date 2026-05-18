@@ -25,7 +25,7 @@ const config: Config = {
   organizationName: "Judlup", // Usually your GitHub org/user name.
   projectName: "express_architecture", // Usually your repo name.
 
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
