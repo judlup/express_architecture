@@ -21,6 +21,10 @@ import {
   LayoutDashboardIcon,
   TableIcon,
   FileTextIcon,
+  ArrowRightIcon,
+  CheckIcon,
+  XIcon,
+  HelpCircleIcon,
 } from "@site/src/components/Icons"
 
 export default function Home() {
@@ -71,47 +75,116 @@ export default function Home() {
       </header>
 
       <main>
-        {/* El Cambio de Enfoque */}
+        {/* El Cambio de Enfoque: Comparativa Visual y Pregunta Central */}
         <section className={styles.section + " " + styles.sectionWithGrayBg}>
-          <div className="container">
-            <h2 className="text--center" style={{ marginBottom: "1rem" }}>
-              El Cambio de Enfoque: De la Lógica Documental a los Artefactos de Decisión
+          <div className="container text--center">
+            <h2 style={{ marginBottom: "0.5rem" }}>
+              El Cambio de Enfoque: De la Documentación a los Artefactos de Decisión
             </h2>
-            <div
-              style={{
-                maxWidth: 920,
-                margin: "0 auto",
-                textAlign: "left",
-                fontSize: "1.08rem",
-                lineHeight: 1.7,
-              }}
-            >
-              <p>
-                En organizaciones con alta dependencia tecnológica, la toma de decisiones exige entender cómo se articulan personas, procesos, sistemas e información. Sin embargo, <strong>disponer de sistemas, documentación o datos no garantiza una comprensión suficiente para decidir</strong>. La información suele encontrarse distribuida, incompleta o en silos de conocimiento, mientras que las relaciones y dependencias críticas permanecen tácitas.
-              </p>
-              <p>
-                Ante este desafío, la literatura sobre sobrecarga informacional advierte que acumular más datos o generar levantamientos exhaustivos no necesariamente conduce a mejores decisiones si la información no puede ser procesada y valorada con pertinencia. Por ello, esta investigación plantea una transformación central:
-              </p>
-              <div
-                style={{
-                  background: "#fff",
-                  borderLeft: "5px solid #00B2B9",
-                  padding: "1.2rem 1.5rem",
-                  margin: "1.5rem 0",
-                  borderRadius: "0 8px 8px 0",
-                  boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
-                }}
-              >
-                <p style={{ margin: 0, fontWeight: 600, color: "#0F1B2A" }}>
-                  Pasar de una lógica predominantemente documental a una lógica orientada a artefactos de decisión.
-                </p>
-                <p style={{ margin: "0.5rem 0 0", fontSize: "0.98rem", color: "#4a5568" }}>
-                  Esto no implica descartar la documentación tradicional, sino comprender cómo el conocimiento arquitectónico puede estructurarse y representarse en función de una necesidad concreta de decisión.
-                </p>
+            <p style={{ maxWidth: 780, margin: "0 auto 1.5rem", color: "#4A5568", fontSize: "1.05rem", lineHeight: 1.6 }}>
+              Disponer de sistemas, documentación o datos no garantiza comprender para decidir. La investigación aborda la sobrecarga informacional reorientando el papel del conocimiento arquitectónico:
+            </p>
+
+            <div className={styles.comparisonContainer}>
+              <div className={styles.comparisonGrid}>
+                {/* Lógica Documental Tradicional */}
+                <div className={`${styles.comparisonCard} ${styles.comparisonCardTraditional}`}>
+                  <div className={styles.comparisonHeader}>
+                    <h3 className={styles.comparisonTitle}>Lógica Documental</h3>
+                    <span className={`${styles.comparisonBadge} ${styles.comparisonBadgeTraditional}`}>
+                      Enfoque Tradicional
+                    </span>
+                  </div>
+                  <ul className={styles.comparisonList}>
+                    <li className={styles.comparisonItem}>
+                      <span className={`${styles.comparisonItemIcon} ${styles.comparisonItemIconWarning}`}>
+                        <XIcon size={14} />
+                      </span>
+                      <div>
+                        <strong>Levantamientos exhaustivos:</strong> Documentar todo sin considerar la necesidad concreta ni el momento de decidir.
+                      </div>
+                    </li>
+                    <li className={styles.comparisonItem}>
+                      <span className={`${styles.comparisonItemIcon} ${styles.comparisonItemIconWarning}`}>
+                        <XIcon size={14} />
+                      </span>
+                      <div>
+                        <strong>Información en silos:</strong> Datos dispersos donde las relaciones y dependencias críticas permanecen tácitas.
+                      </div>
+                    </li>
+                    <li className={styles.comparisonItem}>
+                      <span className={`${styles.comparisonItemIcon} ${styles.comparisonItemIconWarning}`}>
+                        <XIcon size={14} />
+                      </span>
+                      <div>
+                        <strong>Sobrecarga informacional:</strong> Mayor volumen de datos no genera comprensión ni agiliza la deliberación.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Conector Central */}
+                <div className={styles.comparisonConnector}>
+                  <div className={styles.comparisonConnectorPill} title="Transición y evolución">
+                    <ArrowRightIcon size={24} />
+                  </div>
+                  <span style={{ fontSize: "0.78rem", fontWeight: 700, color: "#007A80", textTransform: "uppercase", letterSpacing: "0.5px" }}>
+                    Evolución
+                  </span>
+                </div>
+
+                {/* Lógica de Artefactos de Decisión */}
+                <div className={`${styles.comparisonCard} ${styles.comparisonCardDecision}`}>
+                  <div className={styles.comparisonHeader}>
+                    <h3 className={styles.comparisonTitle}>Lógica de Decisión</h3>
+                    <span className={`${styles.comparisonBadge} ${styles.comparisonBadgeDecision}`}>
+                      Propuesta Doctoral (ADR)
+                    </span>
+                  </div>
+                  <ul className={styles.comparisonList}>
+                    <li className={styles.comparisonItem}>
+                      <span className={`${styles.comparisonItemIcon} ${styles.comparisonItemIconSuccess}`}>
+                        <CheckIcon size={14} />
+                      </span>
+                      <div>
+                        <strong>Punto de partida situado:</strong> La necesidad de decisión condiciona qué información es indispensable.
+                      </div>
+                    </li>
+                    <li className={styles.comparisonItem}>
+                      <span className={`${styles.comparisonItemIcon} ${styles.comparisonItemIconSuccess}`}>
+                        <CheckIcon size={14} />
+                      </span>
+                      <div>
+                        <strong>Información Mínima Suficiente (IMS):</strong> Regla de parada para capturar lo suficiente sin desgaste analítico.
+                      </div>
+                    </li>
+                    <li className={styles.comparisonItem}>
+                      <span className={`${styles.comparisonItemIcon} ${styles.comparisonItemIconSuccess}`}>
+                        <CheckIcon size={14} />
+                      </span>
+                      <div>
+                        <strong>Artefactos como Objetos Frontera:</strong> Trazabilidad socio-técnica que media y soporta la deliberación compartida.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <p>
-                A partir de este planteamiento, la pregunta central de la investigación doctoral es: <strong>¿Cómo deben ser las prácticas de arquitectura empresarial para apoyar la toma de decisiones?</strong> En este marco, <em>Express Architecture</em> funciona como una configuración experimental provisional para materializar y refinar dichas prácticas mediante ciclos de intervención en contextos organizacionales reales.
-              </p>
+
+              {/* Banner Destacado: Pregunta Central */}
+              <div className={styles.questionBanner}>
+                <div className={styles.questionIconWrapper}>
+                  <HelpCircleIcon size={32} />
+                </div>
+                <div className={styles.questionContent}>
+                  <span className={styles.questionBadge}>Pregunta Central de Investigación</span>
+                  <div className={styles.questionTitle}>
+                    ¿Cómo deben ser las prácticas de arquitectura empresarial para apoyar la toma de decisiones?
+                  </div>
+                  <p className={styles.questionSubtext}>
+                    <strong>Express Architecture</strong> opera como la configuración experimental provisional para materializar y refinar estas prácticas mediante ciclos de intervención en contextos reales.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

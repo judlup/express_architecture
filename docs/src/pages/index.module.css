@@ -178,3 +178,221 @@
   margin: 0 auto 2rem;
   line-height: 1.6;
 }
+
+/* ==========================================================================
+   Comparativa visual: Lógica Documental vs. Lógica de Decisión
+   ========================================================================== */
+
+.comparisonContainer {
+  max-width: 1040px;
+  margin: 2rem auto 0;
+}
+
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 860px) {
+  .comparisonGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.comparisonCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 16px rgba(15, 27, 42, 0.06);
+  border: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.comparisonCardTraditional {
+  border-top: 4px solid #94A3B8;
+  background: #FAFCFE;
+}
+
+.comparisonCardDecision {
+  border-top: 4px solid #00B2B9;
+  background: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(0, 178, 185, 0.12);
+  border-color: #00B2B9;
+}
+
+.comparisonHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #EDF2F7;
+}
+
+.comparisonTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0F1B2A;
+  margin: 0;
+}
+
+.comparisonBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+}
+
+.comparisonBadgeTraditional {
+  background: #F1F5F9;
+  color: #64748B;
+}
+
+.comparisonBadgeDecision {
+  background: rgba(0, 178, 185, 0.15);
+  color: #007A80;
+}
+
+.comparisonList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.comparisonItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.94rem;
+  line-height: 1.5;
+  color: #334155;
+}
+
+.comparisonItemIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.comparisonItemIconWarning {
+  background: #FEE2E2;
+  color: #DC2626;
+}
+
+.comparisonItemIconSuccess {
+  background: #CCFBF1;
+  color: #0D9488;
+}
+
+.comparisonConnector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.comparisonConnectorPill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #00B2B9;
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 178, 185, 0.3);
+}
+
+@media screen and (max-width: 860px) {
+  .comparisonConnector {
+    transform: rotate(90deg);
+    margin: -0.25rem 0;
+  }
+}
+
+/* ==========================================================================
+   Banner de Pregunta Central de Investigación
+   ========================================================================== */
+
+.questionBanner {
+  background: #ffffff;
+  border: 2px solid #00B2B9;
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 178, 185, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .questionBanner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+}
+
+.questionIconWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: rgba(0, 178, 185, 0.12);
+  color: #00B2B9;
+  flex-shrink: 0;
+}
+
+.questionContent {
+  flex-grow: 1;
+}
+
+.questionBadge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #007A80;
+  background: rgba(0, 178, 185, 0.12);
+  padding: 0.2rem 0.65rem;
+  border-radius: 6px;
+  margin-bottom: 0.4rem;
+}
+
+.questionTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0F1B2A;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.4;
+}
+
+.questionSubtext {
+  font-size: 0.95rem;
+  color: #4A5568;
+  margin: 0;
+  line-height: 1.55;
+}
