@@ -1,83 +1,71 @@
 ---
 title: Express Architecture
-description: Una metodología ligera y visual (en evolución) para apoyar la toma de decisiones organizacionales mediante Información Mínima Suficiente.
+description: Configuración experimental de prácticas de arquitectura empresarial orientadas a apoyar la toma de decisiones mediante Información Mínima Suficiente.
 ---
 
 # Express Architecture
 
-Express Architecture es una metodología ligera, visual y iterativa desarrollada en el marco de una investigación doctoral (Design Science Research). Su propósito es facilitar la toma de decisiones organizacionales en entornos corporativos complejos mediante la captura y comunicación de Información Mínima Suficiente (IMS).
-
-## ¿Qué problema resuelve?
-
-Muchas organizaciones toman decisiones con información dispersa, incompleta o difícil de interpretar. Express Architecture busca reducir esos fracasos de comunicación y acelerar decisiones mejor fundamentadas al proporcionar artefactos visuales y reglas sencillas para capturar sólo la información necesaria.
-
-## Enfoque: Design Science Research (DSR)
-
-El desarrollo de la metodología sigue ciclos de construcción, aplicación y evaluación. La investigación DSR guía la validación en contextos reales y la iteración del artefacto para mejorar su utilidad y claridad.
-
-## Información Mínima Suficiente (IMS)
-
-IMS es el principio de capturar la menor cantidad de información que sigue siendo útil para tomar la decisión prevista. IMS prioriza claridad, trazabilidad y rapidez sobre la exhaustividad documental.
-
-## Principios básicos
-
-- Enfoque práctico: artefactos que habilitan decisiones.
-- Visualidad: representar relaciones y dependencias de forma inmediata.
-- Ligereza: evitar documentación innecesaria.
-- Iteración: validar y refinar en contexto.
-- Trazabilidad: vincular artefactos con decisiones y evidencias.
-
-## Artefactos destacados
-
-- System Architecture Canvas
-- Business Process Canvas
-- Business Capability Canvas
-- Mapa de relaciones entre procesos y áreas
-- Diagramas de contexto y de infraestructura
-- Matriz de decisiones / Mini ADR
-
-Para cada artefacto la guía describe propósito, cuándo usarlo, qué información requiere y un ejemplo.
-
-## Implementación rápida (guía de inicio)
-
-1. Identificar el contexto y la decisión que se quiere apoyar.
-2. Mapear procesos y áreas clave (IMS).
-3. Identificar sistemas y actores relevantes.
-4. Construir artefactos visuales mínimos.
-5. Detectar brechas y priorizar decisiones.
-6. Documentar acuerdos y acciones.
-7. Iterar según resultados y evidencia.
-
-## Estado actual
-
-Express Architecture está en construcción y se aplica en casos reales como parte de la tesis doctoral. El sitio documenta la versión exploratoria; se publican artefactos, lecciones aprendidas y métricas de evaluación conforme emergen.
+**Express Architecture** es una configuración experimental provisional desarrollada en el marco de una investigación doctoral en Gestión de la Innovación Tecnológica (Universidad de los Andes). Su propósito es operacionalizar y contrastar un conjunto de **prácticas de arquitectura empresarial orientadas a la toma de decisiones** mediante la captura y estructuración de **Información Mínima Suficiente (IMS)**.
 
 ---
 
-## Para quién es
+## De Metodología Cerrada a Configuración Experimental
 
-- Líderes de tecnología y arquitectos empresariales
-- Equipos de procesos y operaciones
-- Equipos de transformación digital y mejora continua
-- Organizaciones sin documentación formal o con documentación dispersa
+En las etapas tempranas de la investigación, el proyecto se concebía como el diseño de una metodología y un conjunto de diagramas específicos. Con la evolución teórica y empírica, el foco se desplazó:
 
-## Cómo funciona (ciclo)
+> **El verdadero objeto de estudio son las prácticas de arquitectura empresarial entendidas como acciones situadas.** 
+> Express Architecture no es el fin último de la tesis, sino el **vehículo operacional o configuración de trabajo** que permite materializar esas prácticas candidatas, sus instrumentos y sus representaciones durante ciclos de intervención en contextos reales.
 
-1. Captura estructurada
-2. Información mínima suficiente
-3. Trazabilidad
-4. Representación visual
-5. Artefacto de decisión
-6. Gestión y decisión
-7. Iteración y refinamiento
+Esta configuración puede ajustarse, reformularse o descartarse parcialmente a medida que se acumula evidencia en el caso de estudio. El resultado final de la investigación será un **modelo de prácticas refinadas**, sus relaciones, mecanismos de configuración y condiciones de aplicabilidad.
 
-## Accesos recomendados
+---
 
-- [Manifiesto](/docs/manifesto/)
-- [Fundamentos](/docs/fundamentos/)
-- [Guía de implementación](../implementation/index)
-- [Artefactos](../artefactos/index)
-- [Casos de uso](../use-cases/index)
-- [Investigación DSR](../research-dsr/index)
-- [Glosario](../glossary/index)
-- [Changelog](../changelog/index)
+## La Lógica Operacional de las Prácticas
+
+La intervención con Express Architecture se organiza alrededor de una secuencia fundamentada que parte de la necesidad concreta y desemboca en la deliberación colectiva:
+
+```mermaid
+flowchart LR
+    A["1. Necesidad de Decisión"] --> B["2. Caracterizar la Decisión"]
+    B --> C["3. Determinar IMS"]
+    C --> D["4. Estructurar y Relacionar"]
+    D --> E["5. Configurar Artefacto"]
+    E --> F["6. Apoyo a la Deliberación"]
+```
+
+1. **Caracterizar la decisión**: Establecer qué se busca resolver, quiénes participan (negocio, TI, operaciones), qué restricciones existen y cuál es el nivel de incertidumbre.
+2. **Determinar la Información Mínima Suficiente (IMS)**: Aplicar un criterio informacional y regla de parada (Simon, 1955; Qi et al., 2024) para identificar la información indispensable sin recurrir a levantamientos exhaustivos.
+3. **Estructurar y relacionar**: Hacer explícitas las conexiones socio-técnicas ($M:N$) entre procesos, sistemas, actores, capacidades, métricas y restricciones mediante trazabilidad.
+4. **Configurar el artefacto de decisión**: Seleccionar y adaptar la representación visual (matriz, canvas, mapa, mini ADR) bajo criterios de ajuste cognitivo (*Cognitive Fit* - Vessey, 1991).
+5. **Apoyar la deliberación**: Utilizar el artefacto como objeto frontera (*Boundary Object* - Kotusev et al., 2023) para facilitar la visión compartida y la discusión entre áreas.
+
+---
+
+## Evaluación en Dos Niveles
+
+La investigación adopta el enfoque metodológico de **Action Design Research (ADR)** (Sein et al., 2011). Para evaluar la configuración se establecen dos niveles diferenciados:
+
+| Nivel de Evaluación | Dimensiones Analizadas |
+| :--- | :--- |
+| **Nivel 1: Las Prácticas** | • Aplicabilidad en contexto real.<br/>• Claridad y facilidad de ejecución.<br/>• Esfuerzo requerido.<br/>• Adaptabilidad ante distintas decisiones.<br/>• Apropiación por parte de los actores. |
+| **Nivel 2: Los Resultados (Artefactos)** | • Comprensión de la situación.<br/>• Trazabilidad de relaciones críticas.<br/>• Suficiencia informacional percibida.<br/>• Utilidad para el análisis de alternativas.<br/>• Calidad del soporte a la deliberación. |
+
+---
+
+## Delimitación Rigurosa del Alcance
+
+Es fundamental destacar lo que esta propuesta busca y lo que conscientemente delimita:
+
+- **Se enfoca en**: Comprender cómo configurar prácticas para que la información arquitectónica sea comprensible, trazable y deliberable en momentos específicos de decisión.
+- **No pretende**: Demostrar relaciones de causalidad directa sobre el desempeño organizacional posterior (ventas, rentabilidad) ni postular que la aplicación de las prácticas conduce automáticamente a "mejores decisiones", dado que el éxito decisional está condicionado por múltiples factores contextuales ajenos al proceso de modelado.
+
+---
+
+## Enlaces Clave
+
+- [Fundamentos Conceptuales y Teóricos](../fundamentos/)
+- [Información Mínima Suficiente (IMS)](../fundamentos/informacion-minima-suficiente)
+- [Guía de Implementación](../guia-implementacion/)
+- [Catálogo de Artefactos](../artefactos/)
+- [Investigación Doctoral en Action Design Research (ADR)](../investigacion-dsr/vision-general)
+

@@ -1,35 +1,112 @@
 ---
 title: Fundamentos
-description: Fundamentos conceptuales de Express Architecture, IMS y razones del enfoque visual y ligero.
+description: Fundamentos conceptuales y teóricos de las prácticas de arquitectura empresarial orientadas a la decisión.
 ---
 
-# Fundamentos de Express Architecture
+# Fundamentos Conceptuales y Teóricos
 
-Este apartado resume los conceptos centrales que sustentan la metodología Express Architecture.
+Este apartado expone el marco conceptual que sustenta la investigación doctoral sobre **prácticas de arquitectura empresarial para apoyar la toma de decisiones** y sitúa el papel de **Express Architecture** como su configuración experimental.
 
-## ¿Qué es Express Architecture?
+---
 
-Express Architecture es una metodología ligera y visual que prioriza la Información Mínima Suficiente (IMS) para apoyar decisiones organizacionales. No es un framework cerrado; está en evolución mediante ciclos DSR.
+## 1. El Cambio de Enfoque: De la Documentación a los Artefactos de Decisión
 
-## Información Mínima Suficiente (IMS)
+En organizaciones complejas con alta dependencia tecnológica, disponer de diagramas, modelos o documentación exhaustiva no asegura que dicha información sea comprensible o útil en el momento de decidir. Con frecuencia, la información se encuentra distribuida entre personas y sistemas, mientras que las relaciones y dependencias críticas permanecen implícitas.
 
-IMS consiste en capturar la menor cantidad de información necesaria para tomar una decisión específica con suficiente fundamento. IMS prioriza utilidad, claridad y trazabilidad sobre exhaustividad.
+Por ello, la investigación parte de una premisa central:
 
-## ¿Por qué ligero?
+> **Avanzar de una lógica predominantemente documental hacia una lógica orientada a artefactos de decisión.**
 
-Porque la sobrecarga documental reduce la velocidad de análisis y la adopción. La ligereza facilita conversaciones entre actores y permite iterar artefactos con evidencia real.
+Esto no significa descartar la documentación formal de arquitectura, sino comprender cómo el conocimiento arquitectónico puede estructurarse y representarse en función de una **necesidad concreta de decisión**.
 
-## ¿Por qué visual?
+---
 
-Las representaciones visuales hacen explícitas relaciones, dependencias y puntos de decisión, lo que mejora la comprensión entre perfiles heterogéneos.
+## 2. Prácticas de Arquitectura Empresarial como Acciones Situadas
 
-## ¿Por qué Design Science Research (DSR)?
+Apoyándose en la lente de la práctica (*practice lens*, Orlikowski, 2000; Kotusev y colaboradores), la investigación distingue con claridad tres elementos que suelen confundirse en la literatura y en la industria:
 
-DSR proporciona un marco para construir un artefacto útil (la metodología), evaluarlo en contextos reales y refinarlo mediante ciclos iterativos basados en evidencia.
+- **La práctica**: Es la **acción situada** realizada por actores concretos en un contexto organizacional para caracterizar una decisión, determinar qué información se requiere, relacionarla y configurar una representación.
+- **El artefacto**: Es la **representación estructurada** (matriz, canvas, mapa, dashboard o mini ADR) producida como medio para visibilizar relaciones y apoyar la deliberación.
+- **La herramienta**: Es el instrumento tecnológico o software (hoja de cálculo, modelador, wiki, repositorio) utilizado para soportar la ejecución de una parte de la práctica.
 
-## Páginas relacionadas
+El foco de estudio no son las herramientas por sí solas ni los diagramas como fines estáticos, sino **las prácticas que permiten configurarlos y utilizarlos frente a una necesidad específica de decisión**.
+
+---
+
+## 3. Caracterización de la Decisión como Punto de Partida
+
+La decisión es el detonante que activa la configuración de las prácticas. No todas las decisiones organizacionales requieren la misma información, involucran a los mismos actores ni admiten la misma forma de representación.
+
+Antes de definir qué datos recopilar o qué gráfico construir, la práctica exige **caracterizar la necesidad de decisión**:
+- ¿Qué se necesita resolver o evaluar?
+- ¿Quiénes participan en la deliberación y qué perspectivas representan (negocio, operaciones, TI, dirección)?
+- ¿Qué restricciones, dependencias críticas y niveles de incertidumbre condicionan el problema?
+
+Esta caracterización evita aplicar plantillas ciegas o catálogos rígidos y permite adaptar el esfuerzo informacional al contexto del episodio de decisión.
+
+---
+
+## 4. Información Mínima Suficiente (IMS) y Lógica de Parada
+
+La Información Mínima Suficiente (IMS) no es una práctica aislada ni un paso metodológico independiente; funciona como un **criterio o principio informacional** dentro de las prácticas.
+
+Se fundamenta en dos pilares:
+1. **Racionalidad Limitada (Simon, 1955)**: Los decisores tienen limitaciones cognitivas de tiempo y procesamiento de información. Más datos no garantizan mejores decisiones (Bettis-Outland, 2012; Tarka, 2017).
+2. **Lógica de Parada de Búsqueda (Qi, Han & Hansen, 2024)**: Continuar recopilando información deja de ser conveniente cuando el costo marginal de recolección supera el beneficio marginal esperado para la decisión.
+
+Asimismo, la investigación mantiene una distinción metodológica crucial:
+- **IMS como criterio durante la construcción**: Regla operativa para detener levantamientos exhaustivos y enfocar los esfuerzos.
+- **Suficiencia informacional como dimensión de evaluación posterior**: Criterio para verificar si los actores participantes consideraron que contaban con los elementos indispensables para deliberar.
+
+---
+
+## 5. Ajuste Cognitivo (Cognitive Fit)
+
+La teoría de *Cognitive Fit* (Vessey, 1991) establece que el desempeño en una tarea mejora cuando existe correspondencia entre las características de la tarea y la forma en que la información es presentada.
+
+En el contexto de la arquitectura empresarial, esto significa que **no existe un artefacto universal ni un único canvas adecuado para cualquier decisión**. Una matriz puede ser idónea para analizar dependencias proceso-sistema, mientras que un mapa de flujo resulta superior para identificar cuellos de botella operativos. Por ello, la investigación no prescribe un catálogo cerrado de representaciones, sino que estudia cómo se configura el artefacto en función de la tarea decisoria.
+
+---
+
+## 6. Artefactos de Decisión como Objetos Frontera (Boundary Objects)
+
+Las decisiones de tecnología y procesos involucran a participantes con diferentes trasfondos profesionales, lenguajes e intereses (Kotusev, Kurnia & Dilnutt, 2023).
+
+Bajo la teoría de *Boundary Objects* (Star & Griesemer), el artefacto de decisión no es solo descriptivo: actúa como un **medio de mediación y diálogo** entre comunidades de negocio y tecnología, permitiendo construir una comprensión compartida y habilitar la deliberación sin forzar una homogeneización artificial de conocimientos.
+
+---
+
+## 7. Perspectiva Socio-Técnica y Trazabilidad
+
+Las organizaciones operan como sistemas socio-técnicos donde las relaciones entre actividades de procesos de negocio y componentes de sistemas presentan estructuras complejas muchos-a-muchos ($M:N$) (Bidmeshk et al., 2025).
+
+La **trazabilidad** en este marco permite reconstruir y hacer explícitos los vínculos entre procesos, actores, sistemas, herramientas, restricciones y métricas, garantizando que el impacto de una decisión no quede oculto tras silos departamentales.
+
+---
+
+## 8. Alcance y Delimitación del "Apoyo a la Decisión"
+
+Para mantener el rigor académico y metodológico, la investigación delimita con claridad qué se entiende por *apoyo a la decisión*:
+
+- **Lo que sí busca el apoyo**: Mejorar la comprensión de la situación analizada, visibilizar relaciones y dependencias implícitas, mantener trazabilidad de la evidencia y facilitar la deliberación estructurada entre actores involucrados.
+- **Lo que no pretende afirmar**: No pretende postular que el uso de estas prácticas conduce automáticamente a "mejores decisiones" ni pretende establecer relaciones de causalidad directa sobre el desempeño financiero u organizacional posterior, dado que la ejecución de una decisión depende de múltiples factores externos al alcance del estudio.
+
+---
+
+## 9. Enfoque Metodológico: Action Design Research (ADR)
+
+La investigación se desarrolla mediante **Action Design Research (ADR)** (Sein et al., 2011) en el área de Servicio al Cliente de **Rena Ware International**:
+- El investigador participa como **actor embebido**.
+- Se estudian **episodios reales de decisión** como unidades embebidas de análisis.
+- Se ejecutan ciclos iterativos de **Construcción, Intervención y Evaluación (BIE)**.
+- El conocimiento se abstrae formalizando un modelo refinado de prácticas, relaciones y condiciones de aplicabilidad transferible analíticamente a otros contextos.
+
+---
+
+## Páginas Relacionadas
 
 - [¿Qué es Express Architecture?](./que-es-express-architecture)
-- [Información Mínima Suficiente](./informacion-minima-suficiente)
-- [Artefactos de decisión](../artefactos/index)
-- [Trazabilidad organizacional](#)
+- [Información Mínima Suficiente (IMS)](./informacion-minima-suficiente)
+- [Marco de Investigación Doctoral (ADR)](../investigacion-dsr/vision-general)
+- [Catálogo de Artefactos de Decisión](../artefactos/)
+

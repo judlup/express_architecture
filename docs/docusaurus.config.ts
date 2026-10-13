@@ -7,7 +7,7 @@ import { themes as prismThemes } from "prism-react-renderer"
 const config: Config = {
   title: "Express Architecture",
   tagline:
-    "Metodología ágil para documentar arquitecturas de software y procesos de negocio de manera visual, intuitiva y colaborativa.",
+    "Prácticas de arquitectura empresarial orientadas a la decisión: estructurando información mínima suficiente para apoyar la deliberación organizacional.",
   favicon: "img/logo.png", // Asegúrate de que el logo esté en docs/static/img/logo.png
 
   // Set the production url of your site here

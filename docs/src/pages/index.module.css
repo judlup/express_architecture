@@ -124,8 +124,24 @@
 }
 
 .principleIcon {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(0, 178, 185, 0.1);
+  color: #00B2B9;
+  margin-bottom: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.principleCard:hover .principleIcon,
+.artefactCard:hover .principleIcon,
+.benefitCard:hover .principleIcon {
+  background: #00B2B9;
+  color: #ffffff;
+  transform: scale(1.05);
 }
 
 .artefactGrid {

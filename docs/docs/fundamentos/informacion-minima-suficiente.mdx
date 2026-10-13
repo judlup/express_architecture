@@ -1,43 +1,69 @@
 ---
 title: Información Mínima Suficiente (IMS)
+description: La Información Mínima Suficiente como principio informacional, criterio de parada y mecanismo dentro de las prácticas de arquitectura empresarial.
 ---
 
-# Información Mínima Suficiente
+# Información Mínima Suficiente (IMS)
 
-La Información Mínima Suficiente (IMS) es el conjunto de variables y atributos necesarios para comprender una situación y habilitar una decisión específica, sin intentar documentar todos los detalles posibles.
+La **Información Mínima Suficiente (IMS)** se entiende en esta investigación como un **criterio informacional** para determinar qué información resulta necesaria y suficiente para comprender una situación de decisión sin recurrir a un levantamiento exhaustivo.
 
-Por qué usar IMS:
+---
 
-- Evita sobrecarga informacional.
-- Permite avanzar rápidamente y generar artefactos útiles.
-- Facilita la toma de decisiones con evidencia suficiente.
+## Naturaleza Conceptual de la IMS
 
-Ejemplos de variables (IMS típicas):
+Dentro del modelo de prácticas propuesto, es fundamental clarificar qué es la IMS:
 
-- `proceso` — nombre y alcance del proceso analizado.
-- `responsable` — persona o rol con responsabilidad sobre el proceso.
-- `área` — unidad organizacional responsable.
-- `sistema` — sistemas clave involucrados.
-- `herramienta` — herramientas utilizadas (si aplica).
-- `métrica` — indicador asociado (si existe) y frecuencia.
-- `tiempo` — tiempos relevantes (SLAs, frecuencia de ejecución).
-- `entrada` / `salida` — insumos y resultados del proceso.
-- `dependencia` — relaciones críticas con otros procesos o sistemas.
-- `restricción` — limitantes técnicas, regulatorias o de negocio.
-- `decisión asociada` — la decisión que se busca apoyar.
+> **La IMS no corresponde a una práctica ni a una fase independiente del proceso; funciona como un principio informacional utilizado dentro de las prácticas para orientar la búsqueda, selección y estructuración de la información.**
 
-Criterios para considerar que la información es suficiente:
+La idea parte de reconocer que disponer de más información no garantiza una mayor comprensión. En entornos corporativos con múltiples herramientas, bases de datos y procesos, la sobrecarga informacional (*information overload*, Bettis-Outland, 2012; Tarka, 2017) paraliza el análisis y dispersa la atención de los decisores.
 
-- Responde directamente a la pregunta o decisión objetivo.
-- Permite identificar responsables y acciones posibles.
-- Reduce la incertidumbre relevante para la decisión.
-- Es verificable por actores clave (stakeholders).
-- Permite derivar al menos un artefacto visual que comunique el problema.
+---
 
-Cómo aplicar IMS en la práctica:
+## Fundamentos Teóricos
 
-1. Definir la decisión a tomar (o la hipótesis a validar).
-2. Listar las variables mínimas necesarias para esa decisión.
-3. Priorizar entrevistas y fuentes para conseguir esas variables.
-4. Registrar y validar con stakeholders.
-5. Generar un artefacto visual y evaluar si permite la decisión; si no, iterar.
+### 1. Racionalidad Limitada (Simon, 1955)
+Herbert Simon demostró que los seres humanos toman decisiones bajo restricciones severas de tiempo, capacidad cognitiva y acceso a la información. Por tanto, los decisores no buscan soluciones analíticamente exhaustivas ("optimización"), sino opciones que satisfagan criterios de suficiencia ("satisficing").
+
+### 2. Lógica de Parada de Búsqueda (Qi, Han & Hansen, 2024)
+En la literatura reciente sobre comportamiento informacional, la recolección de información sigue una regla económica y cognitiva de parada:
+- Buscar más datos genera un costo marginal creciente (en tiempo, reuniones, análisis y esfuerzo humano).
+- Existe un punto de corte donde el **costo marginal de continuar recopilando supera el beneficio esperado** para la decisión que se debe tomar.
+- La IMS actúa como ese mecanismo de parada deliberado dentro de la arquitectura empresarial.
+
+---
+
+## La Suficiencia es Relativa a la Decisión
+
+La suficiencia informacional **no es una propiedad intrínseca o absoluta de los datos**. Depende enteramente de la decisión concreta que se busca apoyar:
+- Una decisión sobre la sustitución de una pasarela de pago puede requerir detalles profundos sobre protocolos de API, comisiones y latencias, pero poco detalle sobre la estructura del organigrama comercial.
+- Una decisión sobre la estandarización del proceso de atención al cliente en tres países puede requerir visibilidad de políticas locales y herramientas operativas, pero menor granularidad en el código fuente de los sistemas.
+
+Por esta razón, **la caracterización previa de la decisión orienta de forma directa la determinación de la IMS**.
+
+---
+
+## Distinción Metodológica Crucial
+
+Para evitar sesgos y tautologías en la investigación y en la práctica, se mantiene una clara separación:
+
+| IMS como Criterio (Durante la Construcción) | Suficiencia Informacional (Dimensión de Evaluación Posterior) |
+| :--- | :--- |
+| Se aplica **ex ante** y de forma iterativa durante las prácticas de recolección y estructuración. | Se evalúa **ex post** una vez producido y utilizado el artefacto de decisión. |
+| Sirve para delimitar el alcance y saber cuándo detener la búsqueda de datos. | Mide si los actores deliberantes percibieron que la información contenida fue comprensible y suficiente para sustentar su análisis. |
+
+Esta distinción metodológica previene validar el resultado utilizando exactamente el mismo mecanismo con el que fue diseñado.
+
+---
+
+## Variables Típicas en la Configuración de IMS
+
+Dependiendo de la necesidad de decisión, las prácticas estructuran un subconjunto específico de variables organizacionales:
+
+- **Decisión y objetivo**: La cuestión específica que requiere resolución o alineación.
+- **Actores y roles**: Personas, áreas o comités involucrados tanto en la decisión como en la operación afectada.
+- **Procesos y flujos**: Actividades principales, entradas, salidas y puntos de control.
+- **Sistemas y herramientas**: Aplicaciones tecnológicas, bases de datos o servicios en la nube vinculados.
+- **Capacidades de negocio**: Habilidades organizacionales requeridas para sustentar el cambio.
+- **Métricas e indicadores**: Mediciones cuantitativas o cualitativas relevantes para evaluar alternativas.
+- **Restricciones y dependencias**: Limitaciones normativas, presupuestales o técnicas que acotan las opciones.
+

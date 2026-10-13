@@ -61,7 +61,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "Investigación (DSR)",
+      label: "Investigación Doctoral (ADR)",
       items: [
         "investigacion-dsr/vision-general",
         "investigacion-dsr/design-science-research",

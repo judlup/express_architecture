@@ -10,7 +10,7 @@ Quick Start
 - Node: >= 18.0
 
 Key Context & Files
-- Read research framing first: [docs/context/DSR.md](docs/context/DSR.md)
+- Read research framing first: [docs/context/ADR.md](docs/context/ADR.md) (and [docs/context/DSR.md](docs/context/DSR.md) for previous context)
 - Site config: [docs/docusaurus.config.ts](docs/docusaurus.config.ts)
 - Navigation: [docs/sidebars.ts](docs/sidebars.ts)
 - Core content: [docs/docs/artefactos/](docs/docs/artefactos/)
@@ -25,7 +25,7 @@ Known Issues
 - Duplicate folders: `docs/docs/artefactos/` and `docs/docs/artefacts/` contain overlapping/duplicate content — prefer `artefactos/` (used in sidebars). Consider consolidating.
 
 Where to Start When Assigned Work
-1. Read [docs/context/DSR.md](docs/context/DSR.md) for research framing and tone.
+1. Read [docs/context/ADR.md](docs/context/ADR.md) for research framing and tone.
 2. Run `npm start` in `docs/` to preview changes locally.
 3. Use `docs/sidebars.ts` to understand or change navigation ordering.
 
