@@ -1,6 +1,5 @@
 /**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
+ * CSS module for the home page (index.tsx)
  */
 
 .heroBanner {
@@ -12,38 +11,19 @@
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 2.5rem 1.5rem;
   }
   .section {
     padding: 2rem 0;
-  }
-  .benefitGrid,
-  .principlesGrid,
-  .artefactGrid {
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
-  }
-  .principleCard,
-  .artefactCard,
-  .benefitCard {
-    min-width: 90vw;
-    max-width: 98vw;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
   }
 }
 
 @media screen and (max-width: 600px) {
   .heroBanner {
-    padding: 1rem 0.5rem;
+    padding: 1.5rem 0.75rem;
   }
   .section {
-    padding: 1.2rem 0;
-  }
-  .principleIcon {
-    font-size: 2rem;
+    padding: 1.5rem 0;
   }
 }
 
@@ -54,73 +34,101 @@
 }
 
 .section {
-  padding: 3rem 0;
+  padding: 3.5rem 0;
 }
 
 .sectionWithGrayBg {
   background: linear-gradient(135deg, #E6EBEF 0%, #F8FAFB 100%);
 }
 
-.benefitGrid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+/* ==========================================================================
+   Grids balanceados (3 columnas y 4 columnas)
+   ========================================================================== */
+
+/* Para secciones de 6 elementos (3x2 simétrico) */
+.grid3Cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
-.benefitCard {
-  background: #fff;
+/* Para secciones de 4 elementos (4x1 en desktop, 2x2 en tablet) */
+.grid4Cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .grid4Cols {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .grid3Cols {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .grid3Cols,
+  .grid4Cols {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+/* ==========================================================================
+   Tarjetas unificadas con distribución equilibrada
+   ========================================================================== */
+
+.card,
+.principleCard,
+.benefitCard,
+.artefactCard {
+  background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 2px 12px rgba(31, 78, 124, 0.08);
   border: 1px solid #E6EBEF;
-  padding: 2rem 1.5rem;
-  min-width: 220px;
-  max-width: 320px;
-  flex: 1 1 220px;
-  text-align: center;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
-}
-
-.benefitCard:hover {
-  box-shadow: 0 4px 16px rgba(0, 178, 185, 0.12);
-  border-color: #00B2B9;
-}
-
-.benefitDescription {
-  font-size: 0.98rem;
-  margin-top: 0.5rem;
-  color: #4a5568;
-}
-
-.principlesGrid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.principleCard {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 1px 6px rgba(31, 78, 124, 0.06);
-  border: 1px solid #E6EBEF;
-  padding: 1.5rem 1rem;
-  min-width: 220px;
-  max-width: 320px;
-  flex: 1 1 220px;
-  text-align: center;
+  padding: 1.75rem 1.4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all 0.3s ease;
+  text-align: center;
+  height: 100%;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.principleCard:hover {
+.card:hover,
+.principleCard:hover,
+.benefitCard:hover,
+.artefactCard:hover {
+  box-shadow: 0 8px 24px rgba(0, 178, 185, 0.16);
   border-color: #00B2B9;
-  box-shadow: 0 4px 12px rgba(0, 178, 185, 0.1);
+  transform: translateY(-4px);
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0F1B2A;
+  margin: 0.25rem 0 0.5rem 0;
+  line-height: 1.35;
+  display: block;
+}
+
+.cardDescription,
+.benefitDescription {
+  font-size: 0.94rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
 }
 
 .principleIcon {
@@ -129,55 +137,26 @@
   justify-content: center;
   width: 52px;
   height: 52px;
-  border-radius: 12px;
+  border-radius: 14px;
   background: rgba(0, 178, 185, 0.1);
   color: #00B2B9;
   margin-bottom: 0.85rem;
+  flex-shrink: 0;
   transition: all 0.3s ease;
 }
 
+.card:hover .principleIcon,
 .principleCard:hover .principleIcon,
-.artefactCard:hover .principleIcon,
-.benefitCard:hover .principleIcon {
+.benefitCard:hover .principleIcon,
+.artefactCard:hover .principleIcon {
   background: #00B2B9;
   color: #ffffff;
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
-.artefactGrid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.artefactCard {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(31, 78, 124, 0.08);
-  border: 1px solid #E6EBEF;
-  padding: 2rem 1.5rem;
-  min-width: 220px;
-  max-width: 320px;
-  flex: 1 1 220px;
-  text-align: center;
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-.artefactCard:hover {
-  box-shadow: 0 4px 16px rgba(0, 178, 185, 0.12);
-  border-color: #00B2B9;
-}
-
-.artefactCard img {
-  max-width: 80px;
-  margin-bottom: 1rem;
-}
+/* ==========================================================================
+   Llamado a la acción (CTA)
+   ========================================================================== */
 
 .ctaSection {
   padding: 4rem 0;

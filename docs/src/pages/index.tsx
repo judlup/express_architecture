@@ -116,219 +116,209 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Lógica Operacional de las Prácticas */}
+        {/* Lógica Operacional de las Prácticas (4 columnas equilibradas) */}
         <section className={styles.section}>
           <div className="container">
             <h2 className="text--center">Lógica Operacional de las Prácticas</h2>
             <p className="text--center" style={{ maxWidth: 760, margin: "0 auto 1.5rem", color: "#4a5568" }}>
               Las prácticas de arquitectura empresarial se entienden como acciones situadas que transforman progresivamente una necesidad de decisión en un artefacto estructurado para apoyar la deliberación.
             </p>
-            <div className={styles.principlesGrid}>
-              <div className={styles.principleCard}>
+            <div className={styles.grid4Cols}>
+              <div className={styles.card}>
                 <span className={styles.principleIcon} aria-label="Caracterizar la Decisión">
                   <TargetIcon size={26} />
                 </span>
-                <strong>1. Caracterizar la Decisión</strong>
-                <p className={styles.benefitDescription}>
-                  Punto de partida situado: precisar qué se necesita decidir, el alcance, los actores involucrados, las restricciones organizacionales y el nivel de incertidumbre, evitando plantillas predeterminadas a ciegas.
+                <strong className={styles.cardTitle}>1. Caracterizar la Decisión</strong>
+                <p className={styles.cardDescription}>
+                  Punto de partida situado: precisar qué se necesita decidir, el alcance, los actores involucrados, las restricciones organizacionales y el nivel de incertidumbre.
                 </p>
               </div>
-              <div className={styles.principleCard}>
+              <div className={styles.card}>
                 <span className={styles.principleIcon} aria-label="Determinar la IMS">
                   <ScaleIcon size={26} />
                 </span>
-                <strong>2. Determinar la IMS</strong>
-                <p className={styles.benefitDescription}>
-                  Aplicar la <em>Información Mínima Suficiente</em> como principio informacional y regla de parada: establecer qué información es necesaria y suficiente para comprender la situación sin recurrir a levantamientos exhaustivos.
+                <strong className={styles.cardTitle}>2. Determinar la IMS</strong>
+                <p className={styles.cardDescription}>
+                  Aplicar la <em>Información Mínima Suficiente</em> como principio informacional y regla de parada para comprender la situación sin levantamientos exhaustivos.
                 </p>
               </div>
-              <div className={styles.principleCard}>
+              <div className={styles.card}>
                 <span className={styles.principleIcon} aria-label="Estructurar y Relacionar">
                   <NetworkIcon size={26} />
                 </span>
-                <strong>3. Estructurar y Relacionar</strong>
-                <p className={styles.benefitDescription}>
-                  Hacer explícitas las dependencias y relaciones socio-técnicas entre procesos, sistemas, actores, métricas y capacidades, garantizando trazabilidad para el análisis de impacto.
+                <strong className={styles.cardTitle}>3. Estructurar y Relacionar</strong>
+                <p className={styles.cardDescription}>
+                  Hacer explícitas las dependencias y relaciones socio-técnicas entre procesos, sistemas, actores, métricas y capacidades, garantizando trazabilidad.
                 </p>
               </div>
-              <div className={styles.principleCard}>
+              <div className={styles.card}>
                 <span className={styles.principleIcon} aria-label="Configurar el Artefacto">
                   <CompassIcon size={26} />
                 </span>
-                <strong>4. Configurar el Artefacto</strong>
-                <p className={styles.benefitDescription}>
-                  Traducir la información en una representación estructurada adaptada a la tarea (<em>Cognitive Fit</em>) que actúe como objeto frontera (<em>Boundary Object</em>) para soportar la deliberación entre negocio y tecnología.
+                <strong className={styles.cardTitle}>4. Configurar el Artefacto</strong>
+                <p className={styles.cardDescription}>
+                  Traducir la información en una representación adaptada a la tarea (<em>Cognitive Fit</em>) que actúe como objeto frontera (<em>Boundary Object</em>) para deliberar.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Pilares Teóricos */}
+        {/* Pilares Teóricos (3 columnas x 2 filas simétrico y balanceado) */}
         <section className={styles.section + " " + styles.sectionWithGrayBg}>
           <div className="container">
             <h2 className="text--center">Fundamentos Teóricos del Modelo</h2>
             <p className="text--center" style={{ maxWidth: 780, margin: "0 auto 1.5rem", color: "#4a5568" }}>
               La investigación articula corrientes teóricas clave para explicar la relación entre decisión, prácticas, información y artefactos.
             </p>
-            <div className={styles.benefitGrid}>
-              <div className={styles.benefitCard}>
+            <div className={styles.grid3Cols}>
+              <div className={styles.card}>
                 <span className={styles.principleIcon} aria-label="Prácticas Situadas">
                   <UsersIcon size={26} />
                 </span>
-                <strong>Prácticas Situadas (Practice Lens)</strong>
-                <p className={styles.benefitDescription}>
-                  Con base en Orlikowski (2000) y Kotusev et al., se distingue con claridad entre la <em>práctica</em> (acción situada de los actores), el <em>artefacto</em> (representación estructurada) y la <em>herramienta</em> (mecanismo técnico de ejecución).
+                <strong className={styles.cardTitle}>Prácticas Situadas (Practice Lens)</strong>
+                <p className={styles.cardDescription}>
+                  Con base en Orlikowski (2000) y Kotusev et al., se distingue con claridad entre la <em>práctica</em> (acción situada), el <em>artefacto</em> (representación estructurada) y la <em>herramienta</em> (mecanismo técnico).
                 </p>
               </div>
-              <div className={styles.benefitCard}>
+              <div className={styles.card}>
                 <span className={styles.principleIcon} aria-label="Racionalidad Limitada">
                   <BrainIcon size={26} />
                 </span>
-                <strong>Racionalidad Limitada & Lógica de Parada</strong>
-                <p className={styles.benefitDescription}>
-                  Fundamentado en Simon (1955) y Qi, Han & Hansen (2024): detener la búsqueda de información cuando el costo marginal de continuar recopilando supera el beneficio esperado para la decisión analizada.
+                <strong className={styles.cardTitle}>Racionalidad Limitada & Parada</strong>
+                <p className={styles.cardDescription}>
+                  Fundamentado en Simon (1955) y Qi, Han & Hansen (2024): detener la búsqueda de datos cuando el costo marginal de continuar recopilando supera el beneficio esperado para la decisión.
                 </p>
               </div>
-              <div className={styles.benefitCard}>
+              <div className={styles.card}>
                 <span className={styles.principleIcon} aria-label="Ajuste Cognitivo">
                   <PuzzleIcon size={26} />
                 </span>
-                <strong>Ajuste Cognitivo (Cognitive Fit)</strong>
-                <p className={styles.benefitDescription}>
-                  Propuesto por Vessey (1991): la efectividad mejora cuando hay correspondencia entre las propiedades de la tarea y la representación visual. Por ello, el estudio no prescribe un formato gráfico único para todo escenario.
+                <strong className={styles.cardTitle}>Ajuste Cognitivo (Cognitive Fit)</strong>
+                <p className={styles.cardDescription}>
+                  Propuesto por Vessey (1991): la efectividad mejora cuando hay correspondencia entre las propiedades de la tarea y la representación visual, evitando formatos únicos universales.
                 </p>
               </div>
-              <div className={styles.benefitCard}>
+              <div className={styles.card}>
                 <span className={styles.principleIcon} aria-label="Objetos Frontera">
                   <BridgeIcon size={26} />
                 </span>
-                <strong>Objetos Frontera (Boundary Objects)</strong>
-                <p className={styles.benefitDescription}>
-                  Siguiendo a Kotusev, Kurnia & Dilnutt (2023): los artefactos de arquitectura empresarial median entre comunidades diversas (negocio, TI, operaciones), posibilitando un lenguaje y visión compartidos para deliberar.
+                <strong className={styles.cardTitle}>Objetos Frontera (Boundary Objects)</strong>
+                <p className={styles.cardDescription}>
+                  Siguiendo a Kotusev, Kurnia & Dilnutt (2023): los artefactos de arquitectura empresarial median entre comunidades diversas (negocio, TI, operaciones), posibilitando diálogo y visión compartida.
                 </p>
               </div>
-              <div className={styles.benefitCard}>
+              <div className={styles.card}>
                 <span className={styles.principleIcon} aria-label="Trazabilidad Socio-Técnica">
                   <GitBranchIcon size={26} />
                 </span>
-                <strong>Trazabilidad Socio-Técnica</strong>
-                <p className={styles.benefitDescription}>
-                  Atendiendo a Bidmeshk et al. (2025): las relaciones muchos-a-muchos entre actividades operativas y tareas de sistemas demandan trazabilidad explícita para entender las dependencias críticas sin dispersión.
+                <strong className={styles.cardTitle}>Trazabilidad Socio-Técnica</strong>
+                <p className={styles.cardDescription}>
+                  Atendiendo a Bidmeshk et al. (2025): las relaciones muchos-a-muchos ($M:N$) entre actividades operativas y tareas de sistemas demandan trazabilidad explícita para visibilizar dependencias.
                 </p>
               </div>
-              <div className={styles.benefitCard}>
+              <div className={styles.card}>
                 <span className={styles.principleIcon} aria-label="Apoyo Acotado a la Decisión">
                   <ShieldCheckIcon size={26} />
                 </span>
-                <strong>Apoyo Acotado a la Decisión</strong>
-                <p className={styles.benefitDescription}>
-                  El alcance se delimita a la comprensión de la situación, visibilidad de relaciones, trazabilidad y soporte a la deliberación, sin pretensiones causales simplistas sobre el desempeño organizacional posterior.
+                <strong className={styles.cardTitle}>Apoyo Acotado a la Decisión</strong>
+                <p className={styles.cardDescription}>
+                  El alcance se delimita a la comprensión de la situación, visibilidad de relaciones, trazabilidad y deliberación, sin pretensiones causales simplistas sobre el desempeño organizacional posterior.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Marco Metodológico ADR */}
+        {/* Marco Metodológico ADR (4 columnas equilibradas) */}
         <section className={styles.section}>
           <div className="container">
             <h2 className="text--center">Estrategia Metodológica: Action Design Research (ADR)</h2>
-            <div
-              style={{
-                maxWidth: 900,
-                margin: "0 auto",
-                textAlign: "left",
-                fontSize: "1.05rem",
-                lineHeight: 1.7,
-              }}
-            >
-              <p>
-                La investigación adopta el enfoque de <strong>Action Design Research (ADR)</strong> (Sein et al., 2011), idóneo para construir y refinar prácticas de arquitectura empresarial mientras se interviene en un contexto organizacional real:
-              </p>
-              <div className={styles.artefactGrid} style={{ marginTop: "1rem", marginBottom: "2rem" }}>
-                <div className={styles.artefactCard}>
-                  <span className={styles.principleIcon} aria-label="Contexto Empírico Real">
-                    <BuildingIcon size={26} />
-                  </span>
-                  <strong>Contexto Empírico Real</strong>
-                  <p style={{ fontSize: "0.92rem", color: "#4a5568", marginTop: "0.5rem" }}>
-                    Desarrollado en <strong>Rena Ware International</strong>, con foco inicial en el área de <strong>Servicio al Cliente</strong> y sus interfaces críticas con procesos, sistemas y mercados en estandarización.
-                  </p>
-                </div>
-                <div className={styles.artefactCard}>
-                  <span className={styles.principleIcon} aria-label="Investigador Embebido">
-                    <UserCheckIcon size={26} />
-                  </span>
-                  <strong>Investigador Embebido</strong>
-                  <p style={{ fontSize: "0.92rem", color: "#4a5568", marginTop: "0.5rem" }}>
-                    Participación activa en iniciativas reales de arquitectura y estandarización, manteniendo mecanismos sistemáticos de reflexividad y trazabilidad de decisiones de diseño.
-                  </p>
-                </div>
-                <div className={styles.artefactCard}>
-                  <span className={styles.principleIcon} aria-label="Episodios de Decisión">
-                    <RefreshCwIcon size={26} />
-                  </span>
-                  <strong>Episodios de Decisión (BIE)</strong>
-                  <p style={{ fontSize: "0.92rem", color: "#4a5568", marginTop: "0.5rem" }}>
-                    Unidades embebidas de análisis donde se configuran, aplican y evalúan concurrentemente las prácticas y los artefactos producidos ante problemas situados.
-                  </p>
-                </div>
-                <div className={styles.artefactCard}>
-                  <span className={styles.principleIcon} aria-label="Evaluación en Dos Niveles">
-                    <CheckSquareIcon size={26} />
-                  </span>
-                  <strong>Evaluación en Dos Niveles</strong>
-                  <p style={{ fontSize: "0.92rem", color: "#4a5568", marginTop: "0.5rem" }}>
-                    Evaluación de las <em>prácticas</em> (aplicabilidad, adaptabilidad, esfuerzo) y de los <em>resultados</em> (comprensión, trazabilidad, suficiencia informacional y deliberación).
-                  </p>
-                </div>
+            <p className="text--center" style={{ maxWidth: 860, margin: "0 auto 1.5rem", color: "#4a5568", fontSize: "1.05rem", lineHeight: 1.7 }}>
+              La investigación adopta el enfoque de <strong>Action Design Research (ADR)</strong> (Sein et al., 2011), idóneo para construir y refinar prácticas de arquitectura empresarial mientras se interviene en un contexto organizacional real:
+            </p>
+            <div className={styles.grid4Cols}>
+              <div className={styles.card}>
+                <span className={styles.principleIcon} aria-label="Contexto Empírico Real">
+                  <BuildingIcon size={26} />
+                </span>
+                <strong className={styles.cardTitle}>Contexto Empírico Real</strong>
+                <p className={styles.cardDescription}>
+                  Desarrollado en <strong>Rena Ware International</strong>, con foco inicial en el área de <strong>Servicio al Cliente</strong> y sus interfaces críticas con procesos y sistemas en estandarización.
+                </p>
+              </div>
+              <div className={styles.card}>
+                <span className={styles.principleIcon} aria-label="Investigador Embebido">
+                  <UserCheckIcon size={26} />
+                </span>
+                <strong className={styles.cardTitle}>Investigador Embebido</strong>
+                <p className={styles.cardDescription}>
+                  Participación activa en iniciativas reales de arquitectura y estandarización, manteniendo mecanismos sistemáticos de reflexividad y trazabilidad de decisiones de diseño.
+                </p>
+              </div>
+              <div className={styles.card}>
+                <span className={styles.principleIcon} aria-label="Episodios de Decisión">
+                  <RefreshCwIcon size={26} />
+                </span>
+                <strong className={styles.cardTitle}>Episodios de Decisión (BIE)</strong>
+                <p className={styles.cardDescription}>
+                  Unidades embebidas de análisis donde se configuran, aplican y evalúan concurrentemente las prácticas y los artefactos producidos ante problemas situados.
+                </p>
+              </div>
+              <div className={styles.card}>
+                <span className={styles.principleIcon} aria-label="Evaluación en Dos Niveles">
+                  <CheckSquareIcon size={26} />
+                </span>
+                <strong className={styles.cardTitle}>Evaluación en Dos Niveles</strong>
+                <p className={styles.cardDescription}>
+                  Evaluación de las <em>prácticas</em> (aplicabilidad, adaptabilidad, esfuerzo) y de los <em>resultados</em> (comprensión, trazabilidad, suficiencia informacional y deliberación).
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Rol de Express Architecture y Artefactos de Trabajo */}
+        {/* Rol de Express Architecture y Artefactos de Trabajo (4 columnas equilibradas) */}
         <section className={styles.section + " " + styles.sectionWithGrayBg}>
           <div className="container">
             <h2 className="text--center">Artefactos de Trabajo y Configuración Experimental</h2>
             <p className="text--center" style={{ maxWidth: 800, margin: "0 auto 1.5rem", color: "#4a5568" }}>
               En este proyecto, <strong>Express Architecture</strong> actúa como una configuración experimental provisional para materializar prácticas, instrumentos y representaciones durante los ciclos de intervención.
             </p>
-            <div className={styles.artefactGrid}>
-              <div className={styles.artefactCard}>
+            <div className={styles.grid4Cols}>
+              <div className={styles.card}>
                 <span className={styles.principleIcon} aria-label="Fichas & Criterios IMS">
                   <ClipboardListIcon size={26} />
                 </span>
-                <h3>Fichas & Criterios IMS</h3>
-                <p>
+                <strong className={styles.cardTitle}>Fichas & Criterios IMS</strong>
+                <p className={styles.cardDescription}>
                   Instrumentos para caracterizar la decisión y definir criterios operativos de suficiencia informacional antes de iniciar representaciones gráficas.
                 </p>
               </div>
-              <div className={styles.artefactCard}>
+              <div className={styles.card}>
                 <span className={styles.principleIcon} aria-label="Solution Architecture Canvas">
                   <LayoutDashboardIcon size={26} />
                 </span>
-                <h3>Solution Architecture Canvas</h3>
-                <p>
+                <strong className={styles.cardTitle}>Solution Architecture Canvas</strong>
+                <p className={styles.cardDescription}>
                   Representación prototípica para estructurar y relacionar procesos, sistemas y actores según la necesidad analizada en contexto.
                 </p>
               </div>
-              <div className={styles.artefactCard}>
+              <div className={styles.card}>
                 <span className={styles.principleIcon} aria-label="Matrices de Trazabilidad">
                   <TableIcon size={26} />
                 </span>
-                <h3>Matrices de Trazabilidad</h3>
-                <p>
+                <strong className={styles.cardTitle}>Matrices de Trazabilidad</strong>
+                <p className={styles.cardDescription}>
                   Conexión explícita entre actividades de procesos, herramientas, sistemas y métricas para visibilizar impactos y dependencias críticas.
                 </p>
               </div>
-              <div className={styles.artefactCard}>
+              <div className={styles.card}>
                 <span className={styles.principleIcon} aria-label="Mini ADR & Acuerdos">
                   <FileTextIcon size={26} />
                 </span>
-                <h3>Mini ADR & Acuerdos</h3>
-                <p>
+                <strong className={styles.cardTitle}>Mini ADR & Acuerdos</strong>
+                <p className={styles.cardDescription}>
                   Registros ligeros para capturar el razonamiento arquitectónico, alternativas valoradas y compromisos derivados de la deliberación.
                 </p>
               </div>
@@ -369,5 +359,3 @@ export default function Home() {
     </Layout>
   )
 }
-
-
